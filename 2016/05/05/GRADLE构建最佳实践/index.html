@@ -63,7 +63,7 @@
 <meta property="og:url" content="http://yoursite.com/2016/05/05/GRADLE构建最佳实践/index.html">
 <meta property="og:site_name" content="keep moving">
 <meta property="og:description" content="随着谷歌对Eclipse的无情抛弃和对Android Studio的日趋完善，使用gradle构建Android项目已经成为开发者的一项必会良技。那么，问题来了，采用什么样的姿势才能让项目开发构建过程高潮迭起，精彩不断呢？其实网上有很多关于gradle的文章，gradle官方和谷歌也提供了详细的文档和教程，可素，当你在构建过程中遇到一些问题或者有特殊的爱好（需求）的时候，这些东西未必能帮（mei）">
-<meta property="og:updated_time" content="2016-05-05T13:39:49.000Z">
+<meta property="og:updated_time" content="2016-05-05T13:59:42.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="GRADLE构建最佳实践">
 <meta name="twitter:description" content="随着谷歌对Eclipse的无情抛弃和对Android Studio的日趋完善，使用gradle构建Android项目已经成为开发者的一项必会良技。那么，问题来了，采用什么样的姿势才能让项目开发构建过程高潮迭起，精彩不断呢？其实网上有很多关于gradle的文章，gradle官方和谷歌也提供了详细的文档和教程，可素，当你在构建过程中遇到一些问题或者有特殊的爱好（需求）的时候，这些东西未必能帮（mei）">
@@ -246,10 +246,10 @@
 <p>加速篇<br>GRADLE的构建过程通常会比较漫长，一个中等项目，10M左右大小的app，一次完整构建大概在5分钟左右，是不是很吓人，当然，如果是在调试阶段，采用Android Studuo 2.0，默认提供的Instant Run方式，每次修改都不会重新构建项目，从而加快了构建过程。恩，这是另一个故事，这里，我们先谈谈GRADLE脚本的加速姿势。<br>一般来说，GRADLE一次完整的构建过程通常分成三个部分，初始化，配置和执行任务，那么我们可以考虑从这三个部分分别尝试优化。</p>
 <p>使用daemon<br>构建初始化的很多工作是关于java虚拟机的启动，加载虚拟机环境，加载class文件等，如果这些动作交给一个单独的后台进程去做，那么，第一次初始化之后的修改代码再构建是不是可以节省很多时间呢？答案是肯定的，通过在gradle.properties加入这样一句来开启，如果想让修改全局所有项目都生效，那么修改这个文件~/.gradle/gradle.properties</p>
 <p>org.gradle.daemon=true<br>按需配置<br>配置有一种方式是按需配置，目前还在试验孵化阶段，所以默认是关闭的，可以通过在gradle.properties加入这样一句来开启</p>
-<p>org.gradle.configureondemand=true<br>依赖库使用固定版本<br>项目开发过程中，难免需要用到三方库，这就形成了项目之间的依赖关系，GRADLE提供了多种集成三方库的方式，提供了很方便的项目依赖管理，本地库，库工程，maven库全支持。既然用到库，就会遇到库版本的问题和升级问题，其中maven库的依赖管理支持一种动态版本的方式，也就是说，GRADLE可以做到不依赖具体某个版本的库，而是每次从repo拉取最新的库到本地做编译。具体使用是这样的：<br>拿gson库举例，如果依赖2.2.1这个版本，可以在build.gradle文件里这样写</p>
-<p>dependencies {<br>    compile ‘com.google.code.gson:gson:2.2.1’<br>}<br>如果不想依赖具体的库，想每次从maven repo中拉取最新的库，那么，可以写成这样：</p>
-<p>dependencies {<br>    compile ‘com.google.code.gson:gson:2.2.＋’<br>}<br>也可以写成这样</p>
-<p>dependencies {<br>    compile ‘com.google.code.gson:gson:2.＋’<br>}<br>甚至可以这样</p>
+<p>org.gradle.configureondemand=true<br>依赖库使用固定版本<br>项目开发过程中，难免需要用到三方库，这就形成了项目之间的依赖关系，GRADLE提供了多种集成三方库的方式，提供了很方便的项目依赖管理，本地库，库工程，maven库全支持。既然用到库，就会遇到库版本的问题和升级问题，其中maven库的依赖管理支持一种动态版本的方式，也就是说，GRADLE可以做到不依赖具体某个版本的库，而是每次从repo拉取最新的库到本地做编译。具体使用是这样的：<br>拿gson库举例，如果依赖2.2.1这个版本，可以在build.gradle文件里这样写<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">dependencies &#123;</span><br><span class="line">	compile <span class="string">'com.google.code.gson:gson:2.2.1'</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>如果不想依赖具体的库，想每次从maven repo中拉取最新的库，那么，可以写成这样：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">dependencies &#123;</span><br><span class="line">	compile <span class="string">'com.google.code.gson:gson:2.2.＋'</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>也可以写成这样<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">dependencies &#123;</span><br><span class="line">	compile <span class="string">'com.google.code.gson:gson:2.＋'</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>甚至可以这样</p>
 <p>dependencies {<br>    compile ‘com.google.code.gson:gson:＋’<br>}<br>其中含义相信不用我解释，大家也看得明白吧。<br>用”+”来通配一个版本族，这样有个好处是maven上有新库了，不用你操心升级，GRADLE编译的时候自动升级了，但是带来了两个坏处，一是，有可能新版库的接口改了，导致编译失败，这个时候需要修改代码做升级适配；更大的坏处是，每次GRADLE编译完整的项目，都会去maven上试图拉取最新的库，这样，拖慢了编译速度，尤其在网络非常差的时候，所以，为了构建速度，建议写死依赖库的版本号。</p>
 <p>升级到最新的GRADLE和JDK<br>有一个很通俗的道理是，发展的东西会越来越好，最新版的GRADLE和JDK往往是性能最好，运行最流畅最快的，所以，升级吧，JDK的升级这里不说了，具体看Oracle的官方文档。这里说说GRADLE的版本升级，GRALDE采用了一种叫做wrapper的方式，可以做到每个项目独立使用其自己的GRADLE版本，这样做的好处不言而喻，每个项目的构建环境独立，互不影响。但为什么会出现这个东西，我的猜想是因为GRADLE发展太快，新旧版本之间很难兼容。如果你有多个项目都采用GRADLE构建，假设都用同一个全局的GRADLE，那么当这个GRADLE升级后，所有的项目可能都会编译失败，你得一个一个改配置，那么，下次再升级，同样的流程的再走一遍，是不是很烦。采用wrapper的方式很好的解决了这个问题，每个项目采用独立的GRADLE版本，互不影响，如果你只想升级其中一个，你改这一个项目的GRADLE wrapper就好了。在你的项目目录下找到这个文件gradle/wrapper/gradle-wrapper.properties并修改distributionUrl=<a href="https://services.gradle.org/distributions/gradle-2.11-all.zip到你想升级的版本就可以了。" target="_blank" rel="external">https://services.gradle.org/distributions/gradle-2.11-all.zip到你想升级的版本就可以了。</a></p>
 <p>减少编译脚本中的I/O操作<br>有时候，编译脚本中会有一些代码做动态信息的获取，比如想从git中获取一个数字作为版本号</p>
