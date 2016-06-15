@@ -63,7 +63,7 @@
 <meta property="og:url" content="http://yoursite.com/2015/01/02/安卓/index.html">
 <meta property="og:site_name" content="keep moving">
 <meta property="og:description" content="android">
-<meta property="og:updated_time" content="2016-06-15T12:12:47.000Z">
+<meta property="og:updated_time" content="2016-06-15T12:17:19.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android 触摸事件机制(二) Activity中触摸事件详解">
 <meta name="twitter:description" content="android">
@@ -265,12 +265,9 @@
 <p>注意：本文是基于Android 4.4.2版本进行介绍的！</p>
 <p><strong>目录</strong><br><strong>1</strong>. <a href="#anchor1">Activity中触摸事件的概述</a><br><strong>2</strong>. <a href="#anchor2">Activity中触摸事件的源码解析</a><br><strong>2.1</strong>. <a href="#anchor2_1">Activity中的dispatchTouchEvent</a><br><strong>2.2</strong>. <a href="#anchor2_2">Activity中的onTouchEvent</a>  </p>
 </blockquote>
-<p><a name="anchor1"></a></p>
 <h1 id="1-Activity中触摸事件的概述"><a href="#1-Activity中触摸事件的概述" class="headerlink" title="1. Activity中触摸事件的概述"></a>1. Activity中触摸事件的概述</h1><p>  Activity中与触摸事件相关API主要是dispatchTouchEvent()和onTouchEvent()。dispatchTouchEvent()是传递触摸事件的API，而onTouchEvent()则是Activity处理触摸事件的API。</p>
 <p>  Activity就是dispatchTouchEvent()将触摸事件传递给它所包含的根视图，从而实现将触摸事件传递给View或ViewGroup进行处理。<br>  而在onTouchEvent()在是Activity自己对触摸事件的处理。例如，如果Activity是一个Dialog主题，即Activity相当于一个对话框；那么当onTouchEvent()收到点击事件，并且该点击事件的坐标在Activity之外的时候，onTouchEvent()就会结束Activity。</p>
-<p><a name="anchor2"></a></p>
-<h1 id="2-Activity中触摸事件的源码解析"><a href="#2-Activity中触摸事件的源码解析" class="headerlink" title="2. Activity中触摸事件的源码解析"></a>2. Activity中触摸事件的源码解析</h1><p><a name="anchor2_1"></a></p>
-<h2 id="2-1-Activity中的dispatchTouchEvent"><a href="#2-1-Activity中的dispatchTouchEvent" class="headerlink" title="2.1 Activity中的dispatchTouchEvent"></a>2.1 Activity中的dispatchTouchEvent</h2><pre><code>public boolean dispatchTouchEvent(MotionEvent ev) {
+<h1 id="2-Activity中触摸事件的源码解析"><a href="#2-Activity中触摸事件的源码解析" class="headerlink" title="2. Activity中触摸事件的源码解析"></a>2. Activity中触摸事件的源码解析</h1><h2 id="2-1-Activity中的dispatchTouchEvent"><a href="#2-1-Activity中的dispatchTouchEvent" class="headerlink" title="2.1 Activity中的dispatchTouchEvent"></a>2.1 Activity中的dispatchTouchEvent</h2><pre><code>public boolean dispatchTouchEvent(MotionEvent ev) {
     // onUserInteraction默认不执行任何动作。
     // 它是提供给客户的接口。
     if (ev.getAction() == MotionEvent.ACTION_DOWN) {
@@ -286,26 +283,8 @@
     return onTouchEvent(ev);
 }
 </code></pre><p>说明：该代码定义在frameworks/base/core/java/android/app/Activity.java中。<br>Activity通过调用dispatchTouchEvent()将触摸事件分发给Activity所包含的视图；如果Activity中的视图都没有对触摸事件进行拦截的话，则调用Activity的onTouchEvent()对触摸事件进行处理。<br>下面，先看看Activity是如何通过superDispatchTouchEvent()将事件分发给它所包含的View的。</p>
-<h3 id="2-1-1-Activity中的getWindow"><a href="#2-1-1-Activity中的getWindow" class="headerlink" title="2.1.1 Activity中的getWindow()"></a>2.1.1 Activity中的getWindow()</h3><pre><code>private Window mWindow;
-
-public Window getWindow() {
-    return mWindow;
-}
-
-final void attach(Context context, ActivityThread aThread,
-        Instrumentation instr, IBinder token, int ident,
-        Application application, Intent intent, ActivityInfo info,
-        CharSequence title, Activity parent, String id,
-        NonConfigurationInstances lastNonConfigurationInstances,
-        Configuration config) {
-
-    ...
-
-    mWindow = PolicyManager.makeNewWindow(this);
-
-    ...
-}
-</code></pre><p>说明：getWindow()返回的是mWindow对象，而mWindow是在attach()中初始化的。attach()是Activity被加载时调用的，具体是如何attact()的，不是我们关心的重点；这里只需要了解，Activity被加载时，attach()会被执行即可。<br>接着，我们就看看PolicyManager.makeNewWindow()是如何实现的。</p>
+<h3 id="2-1-1-Activity中的getWindow"><a href="#2-1-1-Activity中的getWindow" class="headerlink" title="2.1.1 Activity中的getWindow()"></a>2.1.1 Activity中的getWindow()</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> Window mWindow;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> Window <span class="title">getWindow</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> mWindow;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">final</span> <span class="keyword">void</span> <span class="title">attach</span><span class="params">(Context context, ActivityThread aThread,</span><br><span class="line">        Instrumentation instr, IBinder token, <span class="keyword">int</span> ident,</span><br><span class="line">        Application application, Intent intent, ActivityInfo info,</span><br><span class="line">        CharSequence title, Activity parent, String id,</span><br><span class="line">        NonConfigurationInstances lastNonConfigurationInstances,</span><br><span class="line">        Configuration config)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    ...</span><br><span class="line"></span><br><span class="line">    mWindow = PolicyManager.makeNewWindow(<span class="keyword">this</span>);</span><br><span class="line"></span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>说明：getWindow()返回的是mWindow对象，而mWindow是在attach()中初始化的。attach()是Activity被加载时调用的，具体是如何attact()的，不是我们关心的重点；这里只需要了解，Activity被加载时，attach()会被执行即可。<br>接着，我们就看看PolicyManager.makeNewWindow()是如何实现的。</p>
 <h3 id="2-1-2-PolicyManager中的makeNewWindow"><a href="#2-1-2-PolicyManager中的makeNewWindow" class="headerlink" title="2.1.2 PolicyManager中的makeNewWindow()"></a>2.1.2 PolicyManager中的makeNewWindow()</h3><pre><code>public static Window makeNewWindow(Context context) {
     return sPolicy.makeNewWindow(context);
 }   
