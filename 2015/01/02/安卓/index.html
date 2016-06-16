@@ -63,10 +63,12 @@
 <meta property="og:url" content="http://yoursite.com/2015/01/02/安卓/index.html">
 <meta property="og:site_name" content="keep moving">
 <meta property="og:description" content="android">
-<meta property="og:updated_time" content="2016-06-15T12:19:13.000Z">
+<meta property="og:image" content="http://yoursite.com/media/pic/datastruct_algrithm/algrithm/bubble_01.jpg">
+<meta property="og:updated_time" content="2016-06-16T11:26:38.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android 触摸事件机制(二) Activity中触摸事件详解">
 <meta name="twitter:description" content="android">
+<meta name="twitter:image" content="http://yoursite.com/media/pic/datastruct_algrithm/algrithm/bubble_01.jpg">
 
 
 
@@ -369,7 +371,7 @@ protected DecorView generateDecor() {
     return false;
 }    
 </code></pre><p>说明：该代码定义在frameworks/base/core/java/android/view/Window.java中。<br>(01) mCloseOnTouchOutside是一个boolean变量，它是由Window的android:windowCloseOnTouchOutside属性值决定。<br>(02) isOutOfBounds(context, event)是判断该event的坐标是否在context(对于本文来说就是当前的Activity)之外。是的话，返回true；否则，返回false。<br>(03) peekDecorView()则是返回PhoneWindow的mDecor。<br>也就是说，如果设置了android:windowCloseOnTouchOutside属性为true，并且当前事件是ACTION_DOWN，而且点击发生在Activity之外，同时Activity还包含视图的话，则返回true；表示该点击事件会导致Activity的结束。</p>
-<p>至此，Activity中关于触摸事件的代码就分析完毕了。总结来说：<br>(01) <strong>Activity中的dispatchTouchEvent会将触摸事件传递给Activity所包含的视图。具体的实现方式在通过调用到Activity所属Window的superDispatchTouchEvent，进而调用到Window的DecorView的superDispatchTouchEvent，进一步的又调用到ViewGroup的dispatchTouchEvent()。</strong><br> 如果Activity所包含的视图拦截或者消费了该触摸事件的话，就不会再执行Activity的onTouchEvent()；<br> 如果Activity所包含的视图没有拦截或者消费该触摸事件的话，则会执行Activity的onTouchEvent()。<br>(02) <strong>Activity中的onTouchEvent是Activity自身对触摸事件的处理。如果该Activity的android:windowCloseOnTouchOutside属性为true，并且当前触摸事件是ACTION_DOWN，而且该触摸事件的坐标在Activity之外，同时Activity还包含了视图的话；就会导致Activity被结束。</strong></p>
+<p>至此，Activity中关于触摸事件的代码就分析完毕了。总结来说：<br>(01) <strong>Activity中的dispatchTouchEvent会将触摸事件传递给Activity所包含的视图。具体的实现方式在通过调用到Activity所属Window的superDispatchTouchEvent，进而调用到Window的DecorView的superDispatchTouchEvent，进一步的又调用到ViewGroup的dispatchTouchEvent()。</strong><br> 如果Activity所包含的视图拦截或者消费了该触摸事件的话，就不会再执行Activity的onTouchEvent()；<br> 如果Activity所包含的视图没有拦截或者消费该触摸事件的话，则会执行Activity的onTouchEvent()。<br>(02) <strong>Activity中的onTouchEvent是Activity自身对触摸事件的处理。如果该Activity的android:windowCloseOnTouchOutside属性为true，并且当前触摸事件是ACTION_DOWN，而且该触摸事件的坐标在Activity之外，同时Activity还包含了视图的话；就会导致Activity被结束。</strong><br><img src="/media/pic/datastruct_algrithm/algrithm/bubble_01.jpg" alt="img"></p>
 
       
     </div>
