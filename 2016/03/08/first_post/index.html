@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="设计模式," />
 
 
 
@@ -57,20 +57,23 @@
 
 
 
-<meta name="description" content="简单工厂模式例如有三个类：苹果类Apple、香蕉类Banana、橘子类Orange，他们都继承自水果类Fruit还有一个工厂类FruitFactory，里面有个newInstance()方法，根据newInstance()的参数返回不同的水果对象；
-工厂模式">
+<meta name="description" content="工厂模式
+简单工厂模式例如有三个类：苹果类Apple、香蕉类Banana、橘子类Orange，他们都继承自抽象水果类Fruit还有一个工厂类FruitFactory，里面有个newInstance()方法，根据newInstance()的参数返回不同的水果对象；
+工厂模式简单工厂模式的弊端：工厂类负责每个具体实例的创建，当有新的实例增加时，需要修改工厂类的代码。因此抽象出一个工厂接口FruitFa">
 <meta property="og:type" content="article">
 <meta property="og:title" content="简单工厂模式">
 <meta property="og:url" content="http://yoursite.com/2016/03/08/first_post/index.html">
 <meta property="og:site_name" content="keep moving">
-<meta property="og:description" content="简单工厂模式例如有三个类：苹果类Apple、香蕉类Banana、橘子类Orange，他们都继承自水果类Fruit还有一个工厂类FruitFactory，里面有个newInstance()方法，根据newInstance()的参数返回不同的水果对象；
-工厂模式">
+<meta property="og:description" content="工厂模式
+简单工厂模式例如有三个类：苹果类Apple、香蕉类Banana、橘子类Orange，他们都继承自抽象水果类Fruit还有一个工厂类FruitFactory，里面有个newInstance()方法，根据newInstance()的参数返回不同的水果对象；
+工厂模式简单工厂模式的弊端：工厂类负责每个具体实例的创建，当有新的实例增加时，需要修改工厂类的代码。因此抽象出一个工厂接口FruitFa">
 <meta property="og:image" content="https://img1.doubanio.com/icon/u1754078-29.jpg">
-<meta property="og:updated_time" content="2016-06-21T12:22:39.000Z">
+<meta property="og:updated_time" content="2016-06-21T13:04:51.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="简单工厂模式">
-<meta name="twitter:description" content="简单工厂模式例如有三个类：苹果类Apple、香蕉类Banana、橘子类Orange，他们都继承自水果类Fruit还有一个工厂类FruitFactory，里面有个newInstance()方法，根据newInstance()的参数返回不同的水果对象；
-工厂模式">
+<meta name="twitter:description" content="工厂模式
+简单工厂模式例如有三个类：苹果类Apple、香蕉类Banana、橘子类Orange，他们都继承自抽象水果类Fruit还有一个工厂类FruitFactory，里面有个newInstance()方法，根据newInstance()的参数返回不同的水果对象；
+工厂模式简单工厂模式的弊端：工厂类负责每个具体实例的创建，当有新的实例增加时，需要修改工厂类的代码。因此抽象出一个工厂接口FruitFa">
 <meta name="twitter:image" content="https://img1.doubanio.com/icon/u1754078-29.jpg">
 
 
@@ -297,6 +300,25 @@
           </span>
 
           
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/设计模式/" itemprop="url" rel="index">
+                    <span itemprop="name">设计模式</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
 
           
             
@@ -334,8 +356,10 @@
       
 
       
-        <h2 id="简单工厂模式"><a href="#简单工厂模式" class="headerlink" title="简单工厂模式"></a>简单工厂模式</h2><p>例如有三个类：苹果类Apple、香蕉类Banana、橘子类Orange，他们都继承自水果类Fruit<br>还有一个工厂类FruitFactory，里面有个newInstance()方法，根据newInstance()的参数返回不同的水果对象；</p>
-<h2 id="工厂模式"><a href="#工厂模式" class="headerlink" title="工厂模式"></a>工厂模式</h2><p><img src="https://img1.doubanio.com/icon/u1754078-29.jpg" alt="image"></p>
+        <p>工厂模式</p>
+<h2 id="简单工厂模式"><a href="#简单工厂模式" class="headerlink" title="简单工厂模式"></a>简单工厂模式</h2><p>例如有三个类：苹果类Apple、香蕉类Banana、橘子类Orange，他们都继承自抽象水果类Fruit<br>还有一个工厂类FruitFactory，里面有个newInstance()方法，根据newInstance()的参数返回不同的水果对象；</p>
+<h2 id="工厂模式"><a href="#工厂模式" class="headerlink" title="工厂模式"></a>工厂模式</h2><p>简单工厂模式的弊端：工厂类负责每个具体实例的创建，当有新的实例增加时，需要修改工厂类的代码。<br>因此抽象出一个工厂接口FruitFactory，有三个具体的工厂类AppleFactory、BananaFactory、OrangeFactory都继承FruitFactory。其中每个具体的工厂类分别生产具体的水果类：苹果类Apple、香蕉类Banana、橘子类Orange。</p>
+<h2 id="抽象工厂模式"><a href="#抽象工厂模式" class="headerlink" title="抽象工厂模式"></a>抽象工厂模式</h2><p><img src="https://img1.doubanio.com/icon/u1754078-29.jpg" alt="image"></p>
 
       
     </div>
@@ -347,6 +371,12 @@
     </div>
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/设计模式/" rel="tag">#设计模式</a>
+          
+        </div>
       
 
       
@@ -462,7 +492,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -471,7 +501,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -502,7 +532,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#简单工厂模式"><span class="nav-number">1.</span> <span class="nav-text">简单工厂模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#工厂模式"><span class="nav-number">2.</span> <span class="nav-text">工厂模式</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#简单工厂模式"><span class="nav-number">1.</span> <span class="nav-text">简单工厂模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#工厂模式"><span class="nav-number">2.</span> <span class="nav-text">工厂模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#抽象工厂模式"><span class="nav-number">3.</span> <span class="nav-text">抽象工厂模式</span></a></li></ol></div>
             
           </div>
         </section>
