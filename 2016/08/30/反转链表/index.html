@@ -57,16 +57,16 @@
 
 
 
-<meta name="description" content="单链表只有一个指针指向下一个节点，而翻转链表目的是将节点的指针指向前一个节点，在改变指针指向之前，要保证链表不会断裂，因此要将下一个节点保存起来123456789101112131415private static LinkNode reverse(LinkNode head) &amp;#123;   LinkNode reverseHead = null;    LinkNode preNode =">
+<meta name="description" content="测试单链表只有一个指针指向下一个节点，而翻转链表目的是将节点的指针指向前一个节点，在改变指针指向之前，要保证链表不会断裂，因此要将下一个节点保存起来123456789101112131415private static LinkNode reverse(LinkNode head) &amp;#123;   LinkNode reverseHead = null;    LinkNode preNode">
 <meta property="og:type" content="article">
 <meta property="og:title" content="反转链表">
 <meta property="og:url" content="http://yoursite.com/2016/08/30/反转链表/index.html">
 <meta property="og:site_name" content="keep moving">
-<meta property="og:description" content="单链表只有一个指针指向下一个节点，而翻转链表目的是将节点的指针指向前一个节点，在改变指针指向之前，要保证链表不会断裂，因此要将下一个节点保存起来123456789101112131415private static LinkNode reverse(LinkNode head) &amp;#123;   LinkNode reverseHead = null;    LinkNode preNode =">
-<meta property="og:updated_time" content="2016-08-30T04:48:56.000Z">
+<meta property="og:description" content="测试单链表只有一个指针指向下一个节点，而翻转链表目的是将节点的指针指向前一个节点，在改变指针指向之前，要保证链表不会断裂，因此要将下一个节点保存起来123456789101112131415private static LinkNode reverse(LinkNode head) &amp;#123;   LinkNode reverseHead = null;    LinkNode preNode">
+<meta property="og:updated_time" content="2017-03-01T00:30:06.619Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="反转链表">
-<meta name="twitter:description" content="单链表只有一个指针指向下一个节点，而翻转链表目的是将节点的指针指向前一个节点，在改变指针指向之前，要保证链表不会断裂，因此要将下一个节点保存起来123456789101112131415private static LinkNode reverse(LinkNode head) &amp;#123;   LinkNode reverseHead = null;    LinkNode preNode =">
+<meta name="twitter:description" content="测试单链表只有一个指针指向下一个节点，而翻转链表目的是将节点的指针指向前一个节点，在改变指针指向之前，要保证链表不会断裂，因此要将下一个节点保存起来123456789101112131415private static LinkNode reverse(LinkNode head) &amp;#123;   LinkNode reverseHead = null;    LinkNode preNode">
 
 
 
@@ -348,7 +348,7 @@
       
 
       
-        <p>单链表只有一个指针指向下一个节点，而翻转链表目的是将节点的指针指向前一个节点，在改变指针指向之前，要保证链表不会断裂，因此要将下一个节点保存起来<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> LinkNode <span class="title">reverse</span><span class="params">(LinkNode head)</span> </span>&#123;</span><br><span class="line">   LinkNode reverseHead = <span class="keyword">null</span>;</span><br><span class="line">    LinkNode preNode = <span class="keyword">null</span>;</span><br><span class="line">    LinkNode currentNode = head;</span><br><span class="line">    <span class="keyword">while</span> (currentNode!=<span class="keyword">null</span>) &#123;</span><br><span class="line">        LinkNode nextNode = currentNode.next;</span><br><span class="line">        <span class="keyword">if</span>(nextNode == <span class="keyword">null</span>)&#123;</span><br><span class="line">            reverseHead = currentNode;</span><br><span class="line">        &#125;</span><br><span class="line">        currentNode.next = preNode;</span><br><span class="line">        preNode = currentNode;</span><br><span class="line">        currentNode = nextNode;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> reverseHead;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+        <p>测试单链表只有一个指针指向下一个节点，而翻转链表目的是将节点的指针指向前一个节点，在改变指针指向之前，要保证链表不会断裂，因此要将下一个节点保存起来<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> LinkNode <span class="title">reverse</span><span class="params">(LinkNode head)</span> </span>&#123;</span><br><span class="line">   LinkNode reverseHead = <span class="keyword">null</span>;</span><br><span class="line">    LinkNode preNode = <span class="keyword">null</span>;</span><br><span class="line">    LinkNode currentNode = head;</span><br><span class="line">    <span class="keyword">while</span> (currentNode!=<span class="keyword">null</span>) &#123;</span><br><span class="line">        LinkNode nextNode = currentNode.next;</span><br><span class="line">        <span class="keyword">if</span>(nextNode == <span class="keyword">null</span>)&#123;</span><br><span class="line">            reverseHead = currentNode;</span><br><span class="line">        &#125;</span><br><span class="line">        currentNode.next = preNode;</span><br><span class="line">        preNode = currentNode;</span><br><span class="line">        currentNode = nextNode;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> reverseHead;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
