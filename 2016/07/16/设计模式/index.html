@@ -67,7 +67,7 @@
 <meta property="og:description" content="工厂模式
 简单工厂模式举例：有三个类：苹果类Apple、香蕉类Banana、橘子类Orange，他们都继承自抽象水果类Fruit还有一个工厂类FruitFactory，里面有个newInstance()方法，根据newInstance()的参数返回不同的水果对象；
 工厂模式简单工厂模式的弊端：工厂类负责每个具体实例的创建，当有新的实例增加时，需要修改工厂类的代码。举例：抽象出一个工厂接口Fruit">
-<meta property="og:updated_time" content="2017-06-14T07:39:35.452Z">
+<meta property="og:updated_time" content="2017-06-14T07:52:52.772Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="简单工厂模式">
 <meta name="twitter:description" content="工厂模式
@@ -365,10 +365,13 @@
 <li>对象的属性需要按照一定的顺序赋值才有意义，每次调用设置属性的方法都可以返回该对象本身从而实现链式调用；</li>
 <li>对象的创建过程中会使用到系统中的其它对象，而这些对象在产品对象中不易得到；<br>建造模式组成：</li>
 <li>导演者Director</li>
+</ol>
+<ol>
 <li>抽象构造者Builder</li>
 <li>具体构造者ConcreteBuilder</li>
 <li>产品Product</li>
 </ol>
+<p>1.利用flume收集数据，存放到hadoop中，例如来自传统数据的的数据用mr进行收集，存放到hadoop中<br>2.对数据进行初级过滤，把过滤后的数据存放到基础数据层中<br>3.对基础数据库中的数据进行进一步分析，存放到通用数据层中<br>4.根据业务需求，对通用数据层中的数据进行进一步的分析，从而得到业务需求数据<br>5.把业务分析过后的数据通过sqoop导入到mysql中，从而进行前台展现</p>
 
       
     </div>
