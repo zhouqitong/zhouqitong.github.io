@@ -276,6 +276,144 @@
             
               
                 
+                <a class="post-title-link" href="/2017/06/14/设计模式/" itemprop="url">
+                  简单工厂模式
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-06-14T13:54:38+08:00" content="2017-06-14">
+              2017-06-14
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/设计模式/" itemprop="url" rel="index">
+                    <span itemprop="name">设计模式</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/06/14/设计模式/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/06/14/设计模式/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2017/06/14/设计模式/" class="leancloud_visitors" data-flag-title="简单工厂模式">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>工厂模式</p>
+<h2 id="简单工厂模式"><a href="#简单工厂模式" class="headerlink" title="简单工厂模式"></a>简单工厂模式</h2><p>举例：有三个类：苹果类Apple、香蕉类Banana、橘子类Orange，他们都继承自抽象水果类Fruit<br>还有一个工厂类FruitFactory，里面有个newInstance()方法，根据newInstance()的参数返回不同的水果对象；</p>
+<h2 id="工厂模式"><a href="#工厂模式" class="headerlink" title="工厂模式"></a>工厂模式</h2><p>简单工厂模式的弊端：工厂类负责每个具体实例的创建，当有新的实例增加时，需要修改工厂类的代码。<br>举例：抽象出一个工厂接口FruitFactory，接口里面抽象方法newInstance()返回产品对象，有三个具体的工厂类AppleFactory、BananaFactory、OrangeFactory都继承FruitFactory。其中每个具体的工厂类分别生产具体的水果类：苹果类Apple、香蕉类Banana、橘子类Orange。</p>
+<h2 id="抽象工厂模式"><a href="#抽象工厂模式" class="headerlink" title="抽象工厂模式"></a>抽象工厂模式</h2><p>虽然工厂模式解决了简单工厂模式中工厂类职责太重的问题，但是由于每个工厂类只创建一类产品系统会产生大量的工厂类。<br>因此可以将一组相关产品组成一个‘产品族’，由一个工厂来统一生产。<br>举例：有一个工厂接口Factory，有两个抽象方法createPhone()返回Phone对象还有一个方法createComputer()返回Computer对象；有两个具体工厂如三星工厂SumFactory、联想工厂Factory；三星工厂生产三星手机和三星电脑，联想工厂生产联想手机和联想电脑；</p>
+<h2 id="单例模式："><a href="#单例模式：" class="headerlink" title="单例模式："></a>单例模式：</h2><p>整个应用中只有一个实例存在，从而避免创建果果实例而浪费空间；</p>
+<ol>
+<li>饿汉式：对象随着类的创建而创建；</li>
+<li>懒汉式：调用getInstance()方法时才创建对象，并且使用Double check 模式创建，两次非空判断并且加上同步操作<h2 id="多例模式："><a href="#多例模式：" class="headerlink" title="多例模式："></a>多例模式：</h2>一个类可以创建多个相同实例，并且都是该类本身。<h2 id="建造者模式："><a href="#建造者模式：" class="headerlink" title="建造者模式："></a>建造者模式：</h2>适用于当我们要创建的对象比较复杂的时候，将构造和表示相分离，从而使一个构造过程可以创建不同表示的产品。<br>适用场景：</li>
+<li>对象的属性需要按照一定的顺序赋值才有意义，每次调用设置属性的方法都可以返回该对象本身从而实现链式调用；</li>
+<li>对象的创建过程中会使用到系统中的其它对象，而这些对象在产品对象中不易得到；<br>建造模式组成：</li>
+<li>导演者Director</li>
+<li>抽象构造者Builder</li>
+<li>具体构造者ConcreteBuilder</li>
+<li>产品Product</li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2017/04/21/技术大牛养成指南/" itemprop="url">
                   技术大牛养成指南
                 </a>
@@ -397,8 +535,9 @@
 <ol>
 <li>大牛很忙，不太可能单独给你开小灶，更不可能每天都给你开1个小时的小灶；而且一个团队里面，如果大牛平时经常给你开小灶，难免会引起其他团队成员的疑惑，我个人认为如果团队里的大牛如果真正有心的话，多给团队培训是最好的。然而做过培训的都知道，准备一场培训是很耗费时间的，课件和材料至少2个小时（还不能是碎片时间），讲解1个小时，大牛们一个月做一次培训已经是很高频了。</li>
 <li>因为第一个原因，所以一般要找大牛，都是带着问题去请教或者探讨。因为回答或者探讨问题无需太多的时间，更多的是靠经验和积累，这种情况下大牛们都是很乐意的，毕竟影响力是大牛的一个重要指标嘛。然而也要特别注意：如果经常问那些书本或者google能够很容易查到的知识，大牛们也会很不耐烦的，毕竟时间宝贵。经常有网友问我诸如“jvm的-Xmn参数如何配置”这类问题，我都是直接回答“请直接去google”，因为这样的问题实在是太多了，如果自己不去系统学习，每个都要问是非常浪费自己和别人的时间的。</li>
-<li>大牛不多，不太可能每个团队都有技术大牛，只能说团队里面会有比你水平高的人，即使他每天给你开小灶，最终你也只能提升到他的水平；而如果是跨团队的技术大牛，由于工作安排和分配的原因，直接请教和辅导的机会是比较少的，单凭参加几次大牛的培训，是不太可能就成为技术大牛的。<br>综合上述的几个原因，我认为对于大部分人来说，要想成为技术大牛，首先还是要明白“主要靠自己”这个道理，不要期望有个像武功师傅一样的大牛手把手一步一步的教你。适当的时候可以通过请教大牛或者和大牛探讨来提升自己，但大部分时间还是自己系统性、有针对性的提升。<h2 id="业务代码一样很牛逼"><a href="#业务代码一样很牛逼" class="headerlink" title="业务代码一样很牛逼"></a>业务代码一样很牛逼</h2>知乎上有的回答认为写业务代码一样可以很牛逼，理由是业务代码一样可以有各种技巧，例如可以使用封装和抽象使得业务代码更具可扩展性，可以通过和产品多交流以便更好的理解和实现业务，日志记录好了问题定位效率可以提升10倍……等等。</li>
+<li>大牛不多，不太可能每个团队都有技术大牛，只能说团队里面会有比你水平高的人，即使他每天给你开小灶，最终你也只能提升到他的水平；而如果是跨团队的技术大牛，由于工作安排和分配的原因，直接请教和辅导的机会是比较少的，单凭参加几次大牛的培训，是不太可能就成为技术大牛的。<br>综合上述的几个原因，我认为对于大部分人来说，要想成为技术大牛，首先还是要明白“主要靠自己”这个道理，不要期望有个像武功师傅一样的大牛手把手一步一步的教你。适当的时候可以通过请教大牛或者和大牛探讨来提升自己，但大部分时间还是自己系统性、有针对性的提升。</li>
 </ol>
+<h2 id="业务代码一样很牛逼"><a href="#业务代码一样很牛逼" class="headerlink" title="业务代码一样很牛逼"></a>业务代码一样很牛逼</h2><p>知乎上有的回答认为写业务代码一样可以很牛逼，理由是业务代码一样可以有各种技巧，例如可以使用封装和抽象使得业务代码更具可扩展性，可以通过和产品多交流以便更好的理解和实现业务，日志记录好了问题定位效率可以提升10倍……等等。</p>
 <p>业务代码一样有技术含量，这点是肯定的，业务代码中的技术是每个程序员的基础，但只是掌握了这些技巧，并不能成为技术大牛，就像游戏中升级打怪一样，开始打小怪，经验值很高，越到后面经验值越少，打小怪已经不能提升经验值了，这个时候就需要打一些更高级的怪，刷一些有挑战的副本了，没看到哪个游戏只要一直打小怪就能升到顶级的。</p>
 <p>成为技术大牛的路也是类似的，你要不断的提升自己的水平，然后面临更大的挑战，通过应对这些挑战从而使自己水平更上一级，然后如此往复，最终达到技术大牛甚至业界大牛的境界，写业务代码只是这个打怪升级路上的一个挑战而已，而且我认为是比较初级的一个挑战。<br>所以我认为：<strong>业务代码都写不好的程序员肯定无法成为技术大牛，但只把业务代码写好的程序员也还不能成为技术大牛。</strong></p>
 <h2 id="上班太忙没时间自己学习"><a href="#上班太忙没时间自己学习" class="headerlink" title="上班太忙没时间自己学习"></a>上班太忙没时间自己学习</h2><p>很多人认为自己没有成为技术大牛并不是自己不聪明，也不是自己不努力，而是中国的这个环境下，技术人员加班都太多了，导致自己没有额外的时间进行学习。</p>
@@ -476,145 +615,7 @@
 <p>还有很多方法，这里就不一一列举，简单来说，就是要将学到的东西真正试试，才能理解更加深刻，印第安人有一句谚语：I hear and I forget. I see and I remember. I do and I understand，而且“试试”其实可以比较简单，很多时候我们都可以自己动手做。</p>
 <p>当然，如果能够在实际工作中使用，效果会更好，毕竟实际的线上环境和业务复杂度不是我们写个模拟程序就能够模拟的，但这样的机会可遇不可求，大部分情况我们还真的只能靠自己模拟，然后等到真正业务要用的时候，能够信手拈来。</p>
 <h3 id="3-Teaching"><a href="#3-Teaching" class="headerlink" title="3. Teaching"></a>3. Teaching</h3><p>一般来说，经过Learning和Trying，能掌握70%左右，但要真正掌握，我觉得一定要做到能够跟别人讲清楚。因为在讲的时候，我们既需要将一个知识点系统化，也需要考虑各种细节，这会促使我们进一步思考和学习。同时，讲出来后看或者听的人可以有不同的理解，或者有新的补充，这相当于继续完善了整个知识技能体系。<br>这样的例子很多，包括我自己写博客的时候经常遇到，本来我觉得自己已经掌握很全面了，但一写就发现很多点没考虑到；组内培训的时候也经常看到，有的同学写了PPT，但是讲的时候，大家一问，或者一讨论，就会发现很多点还没有讲清楚，或者有的点其实是理解错了。写PPT、讲PPT、讨论PPT，这个流程全部走一遍，基本上对一个知识点掌握就比较全面了。</p>
-<h1 id="6后记"><a href="#6后记" class="headerlink" title="6后记"></a>6后记</h1><p>成为技术大牛梦想虽然很美好，但是要付出很多，不管是Do more还是Do better还是Do exercise，都需要花费时间和精力，这个过程中可能很苦逼，也可能很枯燥，这里我想特别强调一下：前面我讲的都是一些方法论的东西，但真正起决定作用的，其实还是我们对技术的热情和兴趣！</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/03/01/设计模式/" itemprop="url">
-                  简单工厂模式
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-03-01T08:07:09+08:00" content="2017-03-01">
-              2017-03-01
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/设计模式/" itemprop="url" rel="index">
-                    <span itemprop="name">设计模式</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2017/03/01/设计模式/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/01/设计模式/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2017/03/01/设计模式/" class="leancloud_visitors" data-flag-title="简单工厂模式">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>工厂模式</p>
-<h2 id="简单工厂模式"><a href="#简单工厂模式" class="headerlink" title="简单工厂模式"></a>简单工厂模式</h2><p>举例：有三个类：苹果类Apple、香蕉类Banana、橘子类Orange，他们都继承自抽象水果类Fruit<br>还有一个工厂类FruitFactory，里面有个newInstance()方法，根据newInstance()的参数返回不同的水果对象；</p>
-<h2 id="工厂模式"><a href="#工厂模式" class="headerlink" title="工厂模式"></a>工厂模式</h2><p>简单工厂模式的弊端：工厂类负责每个具体实例的创建，当有新的实例增加时，需要修改工厂类的代码。<br>举例：抽象出一个工厂接口FruitFactory，接口里面抽象方法newInstance()返回产品对象，有三个具体的工厂类AppleFactory、BananaFactory、OrangeFactory都继承FruitFactory。其中每个具体的工厂类分别生产具体的水果类：苹果类Apple、香蕉类Banana、橘子类Orange。</p>
-<h2 id="抽象工厂模式"><a href="#抽象工厂模式" class="headerlink" title="抽象工厂模式"></a>抽象工厂模式</h2><p>虽然工厂模式解决了简单工厂模式中工厂类职责太重的问题，但是由于每个工厂类只创建一类产品系统会产生大量的工厂类。<br>因此可以将一组相关产品组成一个‘产品族’，由一个工厂来统一生产。<br>举例：有一个工厂接口Factory，有两个抽象方法createPhone()返回Phone对象还有一个方法createComputer()返回Computer对象；有两个具体工厂如三星工厂SumFactory、联想工厂Factory；三星工厂生产三星手机和三星电脑，联想工厂生产联想手机和联想电脑；</p>
-<h2 id="单例模式："><a href="#单例模式：" class="headerlink" title="单例模式："></a>单例模式：</h2><p>整个应用中只有一个实例存在，从而避免创建果果实例而浪费空间；</p>
-<ol>
-<li>饿汉式：对象随着类的创建而创建；</li>
-<li>懒汉式：调用getInstance()方法时才创建对象，并且使用Double check 模式创建，两次非空判断并且加上同步操作<h2 id="多例模式："><a href="#多例模式：" class="headerlink" title="多例模式："></a>多例模式：</h2>一个类可以创建多个相同实例，并且都是该类本身。<h2 id="建造者模式："><a href="#建造者模式：" class="headerlink" title="建造者模式："></a>建造者模式：</h2>适用于当我们要创建的对象比较复杂的时候，将构造和表示相分离，从而使一个构造过程可以创建不同表示的产品。<br>适用场景：</li>
-<li>对象的属性需要按照一定的顺序赋值才有意义，每次调用设置属性的方法都可以返回该对象本身从而实现链式调用；</li>
-<li>对象的创建过程中会使用到系统中的其它对象，而这些对象在产品对象中不易得到；<br>建造模式组成：</li>
-<li>导演者Director</li>
-<li>抽象构造者Builder</li>
-<li>具体构造者ConcreteBuilder</li>
-<li>产品Product</li>
-</ol>
+<h1 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h1><p>成为技术大牛梦想虽然很美好，但是要付出很多，不管是Do more还是Do better还是Do exercise，都需要花费时间和精力，这个过程中可能很苦逼，也可能很枯燥，这里我想特别强调一下：前面我讲的都是一些方法论的东西，但真正起决定作用的，其实还是我们对技术的热情和兴趣！</p>
 
           
         
