@@ -1,0 +1,38 @@
+.container{
+
+    margin:0 auto;
+    position: relative;
+}
+
+.inner{
+    width: 300px;
+    float: left;
+    font-size:.8rem;
+    position: absolute;
+    background-color: #f9f9f9;
+}
+
+.mytable{
+    width:800px;
+    float: left;
+}
+
+.mytable tr.odd{
+    background-color: #f9f9f9;
+}
+.category{
+    width: 100px;
+}
+.model{
+    width: 150px;
+}
+body{
+    font-size: .8rem;
+}
+.footer{
+    width: 100px;
+    height: 100px;
+    margin:0 auto;
+    position: relative;
+    background-color:red;
+}
