@@ -1,8 +1,9 @@
 {
+  "/static/media/logo.png": "/static/media/logo.d3fc0cfd.png",
   "/static/media/qrcode.png": "/static/media/qrcode.7f709bfb.png",
   "/static/media/zhuboavatar.png": "/static/media/zhuboavatar.16ad5cd5.png",
   "main.css": "static/css/main.e83234a3.css",
   "main.css.map": "static/css/main.e83234a3.css.map",
-  "main.js": "static/js/main.879d357f.js",
-  "main.js.map": "static/js/main.879d357f.js.map"
+  "main.js": "static/js/main.cb7171d3.js",
+  "main.js.map": "static/js/main.cb7171d3.js.map"
 }
