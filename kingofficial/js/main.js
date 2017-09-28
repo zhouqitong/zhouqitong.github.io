@@ -49,6 +49,10 @@ function setFullpage(paddingtop) {
 		// 平滑循环
 		continuousVertical: true,
 		navigationColor   : '#333',
+		onLeave:function (anchorLink,index) {
+			
+			$("#myMenu li").eq(index-1).addClass("active").siblings().removeClass("active");
+		}
 //			fixedElements     : "#myMenu",
 	});
 }
@@ -74,9 +78,8 @@ window.onload = function () {
 		console.log(">=1280 ");
 		paddingtop = 53;
 	}
-	console.log($("#myMenu li"));
 	
-	$("#myMenu").find("li").on("click",function () {
+	$("#myMenu li").on("click",function () {
 		console.log("000000");
 		$(this).addClass("active").siblings().removeClass("active");
 	});
