@@ -36,7 +36,7 @@ function setFullpage(paddingtop) {
 		// 每一页的内容是否垂直居中
 		verticalCentered  : false,
 		//不要和id和name相同
-		anchors           : ['firstPage', 'secondPage', '3rdPage', '4thPage', '5thPage'],
+		anchors           : ['home', 'product', 'plan', 'recruit', 'us'],
 //			menu              : '#myMenu',
 		// css3比jquery 要流畅性能好
 		css3              : true,
