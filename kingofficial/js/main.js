@@ -24,7 +24,6 @@ function animationGroup() {
 	meteorMove('#meteor3', -450, 700, 5000, -100, -1, 100);
 	meteorMove('#meteor4', -450, 700, 5000, -100, -1, 400);
 	meteorMove('#meteor5', -450, 700, 5000, -100, 50);
-	
 }
 
 function setFullpage(paddingtop) {
@@ -45,19 +44,18 @@ function setFullpage(paddingtop) {
 		navigationTooltips: ['首页', '产品介绍', '主播计划', '王者招募', '关于我们'],
 //			loopBottom: true,
 //			loopTop: true,
-		paddingTop:paddingtop,
+		paddingTop:60,
 		// 平滑循环
 		continuousVertical: true,
 		navigationColor   : '#333',
-		onLeave:function (anchorLink,index) {
-			
-			$("#myMenu li").eq(index-1).addClass("active").siblings().removeClass("active");
-		}
+		// onLeave:function (anchorLink,index) {
+		//
+		// 	$("#myMenu li").eq(index-1).addClass("active").siblings().removeClass("active");
+		// }
 //			fixedElements     : "#myMenu",
 	});
 }
 window.onload = function () {
-	
 	var result1 = window.matchMedia('(min-width:1680px)');
 	var result2 = window.matchMedia('(min-width:1440px)');
 	var result3 = window.matchMedia('(min-width:1280px)');
@@ -66,11 +64,23 @@ window.onload = function () {
 	console.log(result1.matches); // false
 	console.log(result2.matches);// true
 	console.log(result3.matches);// true
+	var menuHeight = $("#myMenu").height();
+	var width = $(window).width();
+	var height = $(window).height();
+	console.log("width:"+width);
+	console.log("height:"+height);  // 826 也是fullpage 每屏的高度
+	console.log("menuHeight:"+menuHeight);
+	 var oneBgHeight = height- menuHeight;
+	// $(".one").height();
+	console.log("one height-->"+oneBgHeight);
+	console.log("one height-->"+$("#section1").height());
+	
+	
 	
 	if (result1.matches) {
+	
 		console.log(">=1680 大型设备 大台式电脑");
 		paddingtop = 80;
-	
 	} else if (result2.matches) {
 		console.log(">=1440 中型设备 台式电脑");
 		paddingtop = 60;
@@ -78,12 +88,9 @@ window.onload = function () {
 		console.log(">=1280 ");
 		paddingtop = 53;
 	}
-	
 	$("#myMenu li").on("click",function () {
-		console.log("000000");
 		$(this).addClass("active").siblings().removeClass("active");
 	});
-	
 	setFullpage(paddingtop);
 	
 	setInterval(animationGroup, 10);

@@ -11,10 +11,13 @@
 
     <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css"/>
     <link rel="stylesheet" href="css/main.css">
-    <link rel="icon" type="image/vnd.microsoft.icon" href="src/favicon.ico">
+    <!--<link rel="icon" type="image/vnd.microsoft.icon" href="src/favicon.ico">-->
 
-    <style>
-    </style>
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
+
+
 </head>
 <body>
 
@@ -24,7 +27,6 @@
         <div class="logo">
             <img src="img/logo.png" alt="">
         </div>
-
         <ul id="myMenu">
             <li data-menuanchor="home" class="active">
                 <a href="#home">
@@ -61,339 +63,307 @@
 
 
 </div>
-<div class="main">
-    <div class="main-content">
-        <div id="fullpage">
-            <div class="section" id="section1">
-                <!--<div class="content">-->
-                <div class="one">
-                    <img id="meteor0" src="img/meteor0.png" alt="">
-                    <img id="meteor1" src="img/meteor1.png" alt="">
-                    <img id="meteor2" src="img/meteor2.png" alt="">
-                    <img id="meteor3" src="img/meteor3.png" alt="">
-                    <img id="meteor4" src="img/meteor4.png" alt="">
-                    <img id="meteor5" src="img/meteor5.png" alt="">
 
-                    <div class="download">
-                        <a href="https://www.apple.com/cn/" class="ios">
-                            <span>下载iOS版</span>
-                        </a>
-                        <a href="http://www.google.com" class="android">
-                            <span>下载安卓版</span>
+<div id="fullpage">
+    <div class="section" id="section1">
 
-                        </a>
-                    </div>
+        <img class="bg_img" src="img/one-bg.jpg" alt="">
+        <img id="meteor0" src="img/meteor0.png" alt="">
+        <img id="meteor1" src="img/meteor1.png" alt="">
+        <img id="meteor2" src="img/meteor2.png" alt="">
+        <img id="meteor3" src="img/meteor3.png" alt="">
+        <img id="meteor4" src="img/meteor4.png" alt="">
+        <img id="meteor5" src="img/meteor5.png" alt="">
+
+        <div class="download">
+            <a href="https://www.apple.com/cn/" class="ios">
+                <span>下载iOS版</span>
+            </a>
+            <a href="http://www.google.com" class="android">
+                <span>下载安卓版</span>
+
+            </a>
+        </div>
+    </div>
+    <div class="section" id="section2">
+
+        <div class="title">
+            <p class="title1">产品介绍</p>
+            <p class="title2">下载App,查看更多功能</p>
+        </div>
+        <div class="product">
+            <div class="item">
+                <div class="imgcontainer">
+                    <img src="img/two-product01.png" alt="">
                 </div>
-                <!--</div>-->
-            </div>
-            <div class="section " id="section2">
-                <!--<div class="content">-->
-                <div class="two">
-                    <div class="title">
-                        <p class="title1">产品介绍</p>
-                        <p class="title2">下载App,查看更多功能</p>
-                    </div>
-                    <div class="product">
-                        <div class="item">
-                            <div class="imgcontainer">
-                                <img src="img/two-product01.png" alt="">
-                            </div>
-                            <p class="title1">每日好礼</p>
-                            <p class="title2">每天送皮肤、英雄、5级铭文</p>
+                <p class="title1">每日好礼</p>
+                <p class="title2">每天送皮肤、英雄、5级铭文</p>
 
-                        </div>
-                        <div class="item">
-                            <div class="imgcontainer">
-                                <img src="img/two-product02.png" alt="">
-                            </div>
-                            <p class="title1">免费带躺</p>
-                            <p class="title2">邀请好友注册得排位躺赢车<br/>票，躺着上王者</p>
-                        </div>
-                        <div class="item">
-                            <div class="imgcontainer">
-                                <img src="img/two-product03.png" alt="">
-                            </div>
-                            <p class="title1">王者攻略</p>
-                            <p class="title2">最专业、全面的攻略，技<br/>能、加点、连招、铭文、<br/>出装、打法详解</p>
-                        </div>
-                        <div class="item">
-                            <div class="imgcontainer">
-                                <img src="img/two-product04.png" alt="">
-                            </div>
-                            <p class="title1">王者视频</p>
-                            <p class="title2">聚合全网大神视频，无广告</p>
-                        </div>
-                        <div class="item">
-                            <div class="imgcontainer">
-                                <img src="img/two-product05.png" alt="">
-                            </div>
-                            <p class="title1">排位上分</p>
-                            <p class="title2">代打、陪打任你选，极速脱坑上王者</p>
-                        </div>
-                        <div class="item">
-                            <div class="imgcontainer">
-                                <img src="img/two-product06.png" alt="">
-                            </div>
-                            <p class="title1">王者擂台</p>
-                            <p class="title2">全网首家公平竞技擂台，5w<br/>现金、宝马奖励超出想象</p>
-                        </div>
-                        <div class="item">
-                            <div class="imgcontainer">
-                                <img src="img/two-product07.png" alt="">
-                            </div>
-                            <p class="title1">王者训练营</p>
-                            <p class="title2">全网首家王者荣耀实战训<br/>练课程，职业战队的训练<br/>体系，帮你练就大神操作</p>
-                        </div>
-                        <div class="item">
-                            <div class="imgcontainer">
-                                <img src="img/two-product08.png" alt="">
-                            </div>
-                            <p class="title1">王者娃娃机</p>
-                            <p class="title2">英雄、皮肤、5级铭文1元任你<br/>抓，你就是下一个抓娃娃高手</p>
-                        </div>
-                    </div>
+            </div>
+            <div class="item">
+                <div class="imgcontainer">
+                    <img src="img/two-product02.png" alt="">
                 </div>
-                <!--</div>-->
+                <p class="title1">免费带躺</p>
+                <p class="title2">邀请好友注册得排位躺赢车<br/>票，躺着上王者</p>
             </div>
-            <div class="section " id="section3">
-                <!--<div class="content">-->
-                <div class="three">
-                    <div class="top">
-                        <p>主播计划</p>
-                        <img src="img/three-bg.jpg" alt="">
-                        <div class="title">
-                            <p class="title1">业务介绍</p>
-                            <p class="title2">主播推广App，粉丝使用主播的邀请码注册App，主播赚取收益，粉丝获取App福利。</p>
-                        </div>
-                    </div>
-                    <div class="plan">
-                        <div class="item">
-                            <img src="img/three-plan01.png" alt="">
-                            <p class="title">推广收益</p>
-                            <div class="list">
-                                <div class="left">方案1：</div>
-                                <div class="right">新用户注册1元/人，达到1000人自<br/>动升级到方案2；</div>
-                            </div>
-                            <div class="list">
-                                <div class="left">方案2：</div>
-                                <div class="right">新用户注册0.5元/人，用户首冲1元/<br/>人，达到5000人自动升级到方案3；</div>
-                            </div>
-                            <div class="list">
-                                <div class="left">方案3：</div>
-                                <div class="right">新用户注册0.1元/人，用户首冲1元/<br/>人，用户参与排位上分、擂台、训练<br/>营各奖励1元、1元、50元；</div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <img src="img/three-plan02.png" alt="">
-                            <p class="title">统计及提现</p>
-                            <div class="list">
-                                <div class="left">方案1：</div>
-                                <div class="right">官网登录后台可查看用户注册、消费统计信<br/>息；后台提供提现功能。</div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <img src="img/three-plan03.png" alt="">
-                            <p class="title">推广账号开通</p>
-                            <div class="list">
-                                <div class="left">方案1：</div>
-                                <div class="right">联系客服开通推广系统帐号。</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cooper">
-                        <p>合作主播</p>
-                        <div class="list">
-                            <div class="item">
-                                <img src="img/three-cooper01.png" alt="">
-                                <p>陈一发儿</p>
-                            </div>
-                            <div class="item">
-                                <img src="img/three-cooper02.png" alt="">
-                                <p>指法芬芳张大仙</p>
-                            </div>
-                            <div class="item">
-                                <img src="img/three-cooper03.png" alt="">
-                                <p>韦神</p>
-                            </div>
-                            <div class="item">
-                                <img src="img/three-cooper04.png" alt="">
-                                <p>解放大官儿</p>
-                            </div>
-                            <div class="item">
-                                <img src="img/three-cooper05.png" alt="">
-                                <p>芜湖大司马</p>
-                            </div>
-                            <div class="item">
-                                <img src="img/three-cooper06.png" alt="">
-                                <p>冯提莫</p>
-                            </div>
-                            <div class="item">
-                                <img src="img/three-cooper07.png" alt="">
-                                <p>嗨氏</p>
-                            </div>
-                            <div class="item">
-                                <img src="img/three-cooper08.png" alt="">
-                                <p>解放大官儿</p>
-                            </div>
-                        </div>
-                    </div>
+            <div class="item">
+                <div class="imgcontainer">
+                    <img src="img/two-product03.png" alt="">
                 </div>
-
-                <!--</div>-->
+                <p class="title1">王者攻略</p>
+                <p class="title2">最专业、全面的攻略，技<br/>能、加点、连招、铭文、<br/>出装、打法详解</p>
             </div>
-            <div class="section " id="section4">
-                <!--<div class="content">-->
-                <div class="four">
-                    <div class="top">
-                        <p class="title">王者招募</p>
-                        <img src="img/four-bg.jpg" alt="">
-                    </div>
-
-                    <div class="list">
-                        <div class="item">
-                            <img src="img/four-item01.jpg" alt="">
-                            <p class="title1">代打</p>
-                            <p class="title2">需要对速推、分推等套路熟<br/>悉,从事过代打优先。</p>
-
-                        </div>
-                        <div class="item">
-                            <img src="img/four-item02.jpg" alt="">
-                            <p class="title1">陪打</p>
-                            <p class="title2">要求能Carry全场，让队友能舒服躺赢;<br/>主播优先，让客户上电视。</p>
-                        </div>
-                        <div class="item">
-                            <img src="img/four-item03.jpg" alt="">
-                            <p class="title1">教练</p>
-                            <p class="title2">王者60星以上，需要对职业<br/>战队打法比较熟悉，曾是职<br/>业战队教练或者队员优先。</p>
-                        </div>
-                        <div class="item">
-                            <img src="img/four-item04.jpg" alt="">
-                            <p class="title1">陪练</p>
-                            <p class="title2">国服最强、荣耀王者、天梯<br/>榜排名靠前优先。</p>
-                        </div>
-                    </div>
-                    <div class="advantage">
-                        <p class="subtitle">平台优势</p>
-                        <div class="platform">
-                            <div class="item">
-                                <!--<img class="img1" src="img/four-plateform01.png" alt="">-->
-                                <div class="desc">
-                                    <p class="title1">针对打手</p>
-                                    <p class="title2">只收押金，不收其他费用，订单利润全归打手；<br/>
-                                        订单派发公开、公平、公正，按评分派单，用心服务<br/>不愁没订单；<br/>
-                                        限时（元旦截止）、限量（100人停招）招募，保障已<br/>有打手利益。</p>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <!--<img class="img2" src="img/four-plateform02.png" alt="">-->
-                                <div class="desc desc-padding">
-                                    <p class="title1">针对教练、陪练</p>
-                                    <p class="title2">高额项目分红；<br/>
-                                        合作方式比较人性化，自由、无拘束；<br/>
-                                        只需专注于课程体系。</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
+            <div class="item">
+                <div class="imgcontainer">
+                    <img src="img/two-product04.png" alt="">
                 </div>
-                <!--</div>-->
+                <p class="title1">王者视频</p>
+                <p class="title2">聚合全网大神视频，无广告</p>
             </div>
-
-
-            <div class="section " id="section5">
-                <div class="five">
-                    <div class="top">
-                        <p class="title">关于我们</p>
-                        <img src="img/five-bg.jpg" alt="">
-                    </div>
-                    <div class="content">
-
-                        <div class="company-intro">
-                            <p class="title1">公司介绍</p>
-                            <p class="title2">我是王者App由深圳市超神电竞科技有限公司研发、运营，公司核心成员来自腾讯、华为等知名企业。<br/>
-                                技术总监毕业于北京航空航天大学，曾就职于腾讯；产品总监毕业于华中科技大学，曾就职于腾讯；市场总监毕业于东北大学，曾就职于华为。<br/>
-                                我们都是王者荣耀的重度玩家，深深的热爱这个游戏，同时也深知王者不易，所以我们聚集在一起为广大玩家打造一个能够帮助大家上王者的App。</p>
-                            <p class="title1">产品特色</p>
-                        </div>
-                        <div class="list">
-                            <div class="item">
-                                <p class="title">
-                                    福利、攻略、视频、带躺、资讯、娱乐，一<br/>个都不少，成为你欢乐上王者的
-                                </p>
-                                <p class="blue">神助攻</p>
-                            </div>
-                            <div class="item">
-                                <p class="title">如果你已经是王者段位，我们欢迎你来我们<br/>App帮助其他用户
-                                </p>
-                                <p class="blue">赚取一定的报酬</p>
-                            </div>
-                            <div class="item">
-                                <p class="title">
-                                    每日举办擂台赛，寻找每个英雄的最强玩家，<br/>为广大用户分享大神是如何练就的，同时我们<br/>也为打擂成功的最强玩家提供了
-
-                                </p>
-                                <p class="blue">单日最高5w的战略合作奖金</p>
-
-                            </div>
-                        </div>
-                        <div class="contact-us">
-                            <p class="title1">联系我们</p>
-                            <div class="detail">
-                                <span class="item">
-                                    邮箱:xxxxxxxx@sina.com
-                                </span>
-                                <span class="item">
-                                    QQ:123456
-                                </span>
-                                <span class="item">
-                                   微信:wechat
-                                </span>
-                                <span class="item">
-                                   微信公众号:wechat
-                                </span>
-                                <br/>
-                                <span class="item">
-                                    公司地址：深圳市宝安区西乡街道共和工业路西发B区旭升研发大厦11层1112Y
-                                </span>
-
-
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="footer">
-                        <p >
-                            <a target="_blank"
-                               href="http://www.miibeian.gov.cn/">粤ICP备17119476号</a>
-                            <!--<span >&nbsp;|&nbsp;</span>
-
-
-                            <!--<span>深公网安备11010502025105</span>-->
-
-                            <!--<span-->
-                            <!--class="split">&nbsp;|&nbsp;</span><span>-->
-
-                            <!--客服电话：400-888-8888 (周一至周五 10:00-18:00)--></span>
-                        </p>
-                        <p >
-                            <span>Shenzhen chaoshendianjing Science and Technology Co., Ltd. All Rights 深圳超神电竞科技有限公司 版权所有</span>
-                        </p>
-                    </div>
-
+            <div class="item">
+                <div class="imgcontainer">
+                    <img src="img/two-product05.png" alt="">
+                </div>
+                <p class="title1">排位上分</p>
+                <p class="title2">代打、陪打任你选，极速脱坑上王者</p>
+            </div>
+            <div class="item">
+                <div class="imgcontainer">
+                    <img src="img/two-product06.png" alt="">
+                </div>
+                <p class="title1">王者擂台</p>
+                <p class="title2">全网首家公平竞技擂台，5w<br/>现金、宝马奖励超出想象</p>
+            </div>
+            <div class="item">
+                <div class="imgcontainer">
+                    <img src="img/two-product07.png" alt="">
+                </div>
+                <p class="title1">王者训练营</p>
+                <p class="title2">全网首家王者荣耀实战训<br/>练课程，职业战队的训练<br/>体系，帮你练就大神操作</p>
+            </div>
+            <div class="item">
+                <div class="imgcontainer">
+                    <img src="img/two-product08.png" alt="">
+                </div>
+                <p class="title1">王者娃娃机</p>
+                <p class="title2">英雄、皮肤、5级铭文1元任你<br/>抓，你就是下一个抓娃娃高手</p>
+            </div>
+        </div>
+    </div>
+    <div class="section " id="section3">
+        <div class="top">
+            <p>主播计划</p>
+            <img src="img/three-bg.jpg" alt="">
+            <div class="title">
+                <p class="title1">业务介绍</p>
+                <p class="title2">主播推广App，粉丝使用主播的邀请码注册App，主播赚取收益，粉丝获取App福利。</p>
+            </div>
+        </div>
+        <div class="plan">
+            <div class="item">
+                <img src="img/three-plan01.png" alt="">
+                <p class="title">推广收益</p>
+                <div class="list">
+                    <div class="left">方案1：</div>
+                    <div class="right">新用户注册1元/人，达到1000人自<br/>动升级到方案2；</div>
+                </div>
+                <div class="list">
+                    <div class="left">方案2：</div>
+                    <div class="right">新用户注册0.5元/人，用户首冲1元/<br/>人，达到5000人自动升级到方案3；</div>
+                </div>
+                <div class="list">
+                    <div class="left">方案3：</div>
+                    <div class="right">新用户注册0.1元/人，用户首冲1元/<br/>人，用户参与排位上分、擂台、训练<br/>营各奖励1元、1元、50元；</div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="img/three-plan02.png" alt="">
+                <p class="title">统计及提现</p>
+                <div class="list">
+                    <div class="left">方案1：</div>
+                    <div class="right">官网登录后台可查看用户注册、消费统计信<br/>息；后台提供提现功能。</div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="img/three-plan03.png" alt="">
+                <p class="title">推广账号开通</p>
+                <div class="list">
+                    <div class="left">方案1：</div>
+                    <div class="right">联系客服开通推广系统帐号。</div>
+                </div>
+            </div>
+        </div>
+        <div class="cooper">
+            <p>合作主播</p>
+            <div class="list">
+                <div class="item">
+                    <img src="img/three-cooper01.png" alt="">
+                    <p>陈一发儿</p>
+                </div>
+                <div class="item">
+                    <img src="img/three-cooper02.png" alt="">
+                    <p>指法芬芳张大仙</p>
+                </div>
+                <div class="item">
+                    <img src="img/three-cooper03.png" alt="">
+                    <p>韦神</p>
+                </div>
+                <div class="item">
+                    <img src="img/three-cooper04.png" alt="">
+                    <p>解放大官儿</p>
+                </div>
+                <div class="item">
+                    <img src="img/three-cooper05.png" alt="">
+                    <p>芜湖大司马</p>
+                </div>
+                <div class="item">
+                    <img src="img/three-cooper06.png" alt="">
+                    <p>冯提莫</p>
+                </div>
+                <div class="item">
+                    <img src="img/three-cooper07.png" alt="">
+                    <p>嗨氏</p>
+                </div>
+                <div class="item">
+                    <img src="img/three-cooper08.png" alt="">
+                    <p>解放大官儿</p>
                 </div>
             </div>
         </div>
     </div>
+    <div class="section " id="section4">
+        <div class="top">
+            <p class="title">王者招募</p>
+            <img src="img/four-bg.jpg" alt="">
+        </div>
+        <div class="list">
+            <div class="item">
+                <img src="img/four-item01.jpg" alt="">
+                <p class="title1">代打</p>
+                <p class="title2">需要对速推、分推等套路熟<br/>悉,从事过代打优先。</p>
+
+            </div>
+            <div class="item">
+                <img src="img/four-item02.jpg" alt="">
+                <p class="title1">陪打</p>
+                <p class="title2">要求能Carry全场，让队友能舒服躺赢;<br/>主播优先，让客户上电视。</p>
+            </div>
+            <div class="item">
+                <img src="img/four-item03.jpg" alt="">
+                <p class="title1">教练</p>
+                <p class="title2">王者60星以上，需要对职业<br/>战队打法比较熟悉，曾是职<br/>业战队教练或者队员优先。</p>
+            </div>
+            <div class="item">
+                <img src="img/four-item04.jpg" alt="">
+                <p class="title1">陪练</p>
+                <p class="title2">国服最强、荣耀王者、天梯<br/>榜排名靠前优先。</p>
+            </div>
+        </div>
+        <div class="advantage">
+            <p class="subtitle">平台优势</p>
+            <div class="platform">
+                <div class="item">
+                    <!--<img class="img1" src="img/four-plateform01.png" alt="">-->
+                    <div class="desc">
+                        <p class="title1">针对打手</p>
+                        <p class="title2">只收押金，不收其他费用，订单利润全归打手；<br/>
+                            订单派发公开、公平、公正，按评分派单，用心服务<br/>不愁没订单；<br/>
+                            限时（元旦截止）、限量（100人停招）招募，保障已<br/>有打手利益。</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <!--<img class="img2" src="img/four-plateform02.png" alt="">-->
+                    <div class="desc desc-padding">
+                        <p class="title1">针对教练、陪练</p>
+                        <p class="title2">高额项目分红；<br/>
+                            合作方式比较人性化，自由、无拘束；<br/>
+                            只需专注于课程体系。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section " id="section5">
+
+        <div class="top">
+            <p class="title">关于我们</p>
+            <img src="img/five-bg.jpg" alt="">
+        </div>
+        <div class="content">
+
+            <div class="company-intro">
+                <p class="title1">公司介绍</p>
+                <p class="title2">我是王者App由深圳市超神电竞科技有限公司研发、运营，公司核心成员来自腾讯、华为等知名企业。<br/>
+                    技术总监毕业于北京航空航天大学，曾就职于腾讯；产品总监毕业于华中科技大学，曾就职于腾讯；市场总监毕业于东北大学，曾就职于华为。<br/>
+                    我们都是王者荣耀的重度玩家，深深的热爱这个游戏，同时也深知王者不易，所以我们聚集在一起为广大玩家打造一个能够帮助大家上王者的App。</p>
+                <p class="title1">产品特色</p>
+            </div>
+            <div class="list">
+                <div class="item">
+                    <p class="title">
+                        福利、攻略、视频、带躺、资讯、娱乐，一<br/>个都不少，成为你欢乐上王者的
+                    </p>
+                    <p class="blue">神助攻</p>
+                </div>
+                <div class="item">
+                    <p class="title">如果你已经是王者段位，我们欢迎你来我们<br/>App帮助其他用户
+                    </p>
+                    <p class="blue">赚取一定的报酬</p>
+                </div>
+                <div class="item">
+                    <p class="title">
+                        每日举办擂台赛，寻找每个英雄的最强玩家，<br/>为广大用户分享大神是如何练就的，同时我们<br/>也为打擂成功的最强玩家提供了
+
+                    </p>
+                    <p class="blue">单日最高5w的战略合作奖金</p>
+
+                </div>
+            </div>
+            <div class="contact-us">
+                <p class="title1">联系我们</p>
+                <div class="detail">
+                                <span class="item">
+                                    邮箱:xxxxxxxx@sina.com
+                                </span>
+                    <span class="item">
+                                    QQ:123456
+                                </span>
+                    <span class="item">
+                                   微信:wechat
+                                </span>
+                    <span class="item">
+                                   微信公众号:wechat
+                                </span>
+                    <br/>
+                    <span class="item">
+                                    公司地址：深圳市宝安区西乡街道共和工业路西发B区旭升研发大厦11层1112Y
+                                </span>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p>
+                <a target="_blank"
+                   href="http://www.miibeian.gov.cn/">粤ICP备17119476号</a>
+                <!--<span >&nbsp;|&nbsp;</span>
+
+
+                <!--<span>深公网安备11010502025105</span>-->
+
+                <!--<span-->
+                <!--class="split">&nbsp;|&nbsp;</span><span>-->
+
+                <!--客服电话：400-888-8888 (周一至周五 10:00-18:00)--></span>
+            </p>
+            <p>
+                <span>Shenzhen chaoshendianjing Science and Technology Co., Ltd. All Rights 深圳超神电竞科技有限公司 版权所有</span>
+            </p>
+        </div>
+    </div>
 </div>
-
-
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
 <script type="text/javascript" src="js/jquery.easings.min.js"></script>
 <script src="js/move.js"></script>
-
 <script src="js/main.js"></script>
 
 
