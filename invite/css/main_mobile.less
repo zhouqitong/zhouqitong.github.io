@@ -227,6 +227,8 @@ a {
 .main{
   position: relative;
   background :url("../img/main_mobile_bg.jpg") no-repeat;
+  .lessRem(width,750);
+  .lessRem(height,2727);
   //width:100%;
   //;
   //.lessRem(height,1648);
@@ -241,7 +243,6 @@ background-size: contain;
   .content{
     margin:0 auto;
     .lessRem(width,703);
-    .lessRem(height,2727);
     .lessRem(padding-top,421);
     .first{
       color:#fff;
@@ -280,7 +281,7 @@ background-size: contain;
               float: left;
 
 
-              .lessRem(font-size,14);
+              .lessRem(font-size,22);
               color:@fontColorGray;
 
               >span{
@@ -323,7 +324,7 @@ background-size: contain;
                 .lessRem(height, 119);
               }
               p {
-                .lessRem(font-size, 12);
+                .lessRem(font-size, 24);
                 color: @fontColorGray;
                 text-align: center;
               }
@@ -340,29 +341,31 @@ background-size: contain;
             .lessRem(padding-right,15);
             .lessRem(padding-bottom,15);
             .lessRem(margin-left,25);
-            background: url("../img/first_content_one_bg.jpg") no-repeat;
-            background-size: cover;
+            background: url("../img/first_content_one_bg_mobile.jpg") no-repeat;
+            background-size: 100% 100%;
           }
           .first-content-two {
             float: left;
             .lessRem(width, 290);
-            .lessRem(height, 419);
+            .lessRem(height, 422);
             .lessRem(margin-left,5);
             .lessRem(padding-left,15);
             .lessRem(padding-right,15);
             .lessRem(padding-bottom,15);
-            background: url("../img/first_content_two_bg.jpg") no-repeat;
-            background-size: cover;
+            background: url("../img/first_content_two_bg_mobile.png") no-repeat;
+            background-size: 100% 100%;
+
             >p{
               color:@fontColorDarkYellow;
-              .lessRem(font-size,14);
+              .lessRem(font-size,22.05);
               text-align: center;
               .lessRem(margin-left,-8);
+              .lessRem(margin-bottom,5);
             }
           }
           .first-content-three{
-            .lessRem(width, 292);
-            .lessRem(height, 386);
+            .lessRem(width, 290);
+            .lessRem(height, 422);
             .lessRem(padding-left,15);
             .lessRem(padding-right,15);
             .lessRem(padding-bottom,15);
@@ -376,15 +379,15 @@ background-size: contain;
             background: url("../img/first_content_four_bg.jpg") no-repeat;
             background-size: cover;
             float: left;
-            .lessRem(margin-top,65);
+            .lessRem(margin-top,100);
             .lessRem(padding-top,10);
             position: relative;
             >img{
               position: absolute;
               left:30%;
-              .lessRem(top,-125);
-              .lessRem(width,182);
-              .lessRem(height,125);
+              .lessRem(top,-150);
+              .lessRem(width,220);
+              .lessRem(height,151);
 
             }
             .pick-right-now{
@@ -405,22 +408,21 @@ background-size: contain;
 
               background-color: #360d0d;
               border: 1px solid #441616;
-
               .lessRem(width,316);
               .lessRem(height,67);
               .lessRem(line-height,67);
-
               margin:0 auto;
               .lessRem(margin-top,10);
+              .lessRem(font-size,24);
+
               span{
                 color: @fontColorDarkYellow;
-                .lessRem(font-size,14);
                 .lessRem(margin-left,5);;
               }
               >input{
                 display: inline-block;
-                .lessRem(width,150);
-                .lessRem(font-size,14);
+                .lessRem(width,160);
+
                 color:@fontColorDarkGray;
 
               }
@@ -436,20 +438,17 @@ background-size: contain;
               .lessRem(margin-top,5);
               span{
                 color: @fontColorDarkYellow;
-                .lessRem(font-size,14);
-                margin-left: 5px;
+                .lessRem(font-size,24);
+
+                .lessRem(margin-left,5);;
               }
               >input{
                 display: inline-block;
                 .lessRem(width,60);
-                .lessRem(font-size,14);
                 color:@fontColorDarkGray;
+                .lessRem(font-size,24);
               }
-              i{
-                background-color: #441616;
-                height:100%;
-                width:1px;
-              }
+
               a{
 
                 display: inline-block;
@@ -457,7 +456,7 @@ background-size: contain;
                 .lessRem(width,126);
                 border:none;
                 border-left: 1px solid #4a1616;
-                .lessRem(font-size,14);
+                .lessRem(font-size,19);
                 color:@fontColorGray;
                 .lessRem(padding-left,10);
                 cursor: pointer;
@@ -476,7 +475,7 @@ background-size: contain;
         background: url("../img/second_bg.png") no-repeat;
         .lessRem(height,90);
         overflow: hidden;
-        ;
+        .lessRem(font-size,24);
         .title-num{
           background: url("../img/title_num.jpg") no-repeat;
           float: left;
@@ -485,7 +484,7 @@ background-size: contain;
           background-size: cover;
           position: relative;
           span{
-            .lessRem(font-size,30);
+            .lessRem(font-size,24);
             color:@fontColorYellow;
             .lessTransformCenter;
             .lessRem(margin-top,-10);
@@ -495,6 +494,7 @@ background-size: contain;
         .title-content{
           .lessRem(margin-left,70);
           overflow: hidden;
+
           .red-title{
             color:@fontColorRed;
             .lessRem(font-size,36);
@@ -502,7 +502,7 @@ background-size: contain;
           }
           .float-title{
             float: left;
-            .lessRem(font-size,14);
+            .lessRem(font-size,24);
             color:@fontColorGray;
             //&:before{
             //  content:"";
@@ -547,7 +547,7 @@ background-size: contain;
 
           }
           >p{
-            .lessRem(font-size,12);
+            .lessRem(font-size,20);
             .lessRem(height,46);
             .lessRem(line-height,46);
             color: @fontColorLightYellow;
@@ -564,7 +564,7 @@ background-size: contain;
             color:@fontColorGray;
             .lessRem(margin-top,35);
 
-            .lessRem(font-size,14);
+            .lessRem(font-size,20);
             text-align: center;
             ;
           }

@@ -154,12 +154,13 @@ a {
 .main {
   position: relative;
   background: url("../img/main_mobile_bg.jpg") no-repeat;
+  width: 10rem;
+  height: 36.36rem;
   background-size: contain;
 }
 .main .content {
   margin: 0 auto;
   width: 9.37333333rem;
-  height: 36.36rem;
   padding-top: 5.61333333rem;
 }
 .main .content .first {
@@ -205,7 +206,7 @@ a {
 }
 .main .content .first .first-item .new-user-text .title-content .float-title {
   float: left;
-  font-size: 0.18666667rem;
+  font-size: 0.29333333rem;
   color: #949494;
 }
 .main .content .first .first-item .new-user-text .title-content .float-title > span {
@@ -245,7 +246,7 @@ a {
   height: 1.58666667rem;
 }
 .main .content .first .first-item .new-user-content .row-one .item p {
-  font-size: 0.16rem;
+  font-size: 0.32rem;
   color: #949494;
   text-align: center;
 }
@@ -258,29 +259,30 @@ a {
   padding-right: 0.2rem;
   padding-bottom: 0.2rem;
   margin-left: 0.33333333rem;
-  background: url("../img/first_content_one_bg.jpg") no-repeat;
-  background-size: cover;
+  background: url("../img/first_content_one_bg_mobile.jpg") no-repeat;
+  background-size: 100% 100%;
 }
 .main .content .first .first-item .new-user-content .first-content-two {
   float: left;
   width: 3.86666667rem;
-  height: 5.58666667rem;
+  height: 5.62666667rem;
   margin-left: 0.06666667rem;
   padding-left: 0.2rem;
   padding-right: 0.2rem;
   padding-bottom: 0.2rem;
-  background: url("../img/first_content_two_bg.jpg") no-repeat;
-  background-size: cover;
+  background: url("../img/first_content_two_bg_mobile.png") no-repeat;
+  background-size: 100% 100%;
 }
 .main .content .first .first-item .new-user-content .first-content-two > p {
   color: #cb7434;
-  font-size: 0.18666667rem;
+  font-size: 0.294rem;
   text-align: center;
   margin-left: -0.10666667rem;
+  margin-bottom: 0.06666667rem;
 }
 .main .content .first .first-item .new-user-content .first-content-three {
-  width: 3.89333333rem;
-  height: 5.14666667rem;
+  width: 3.86666667rem;
+  height: 5.62666667rem;
   padding-left: 0.2rem;
   padding-right: 0.2rem;
   padding-bottom: 0.2rem;
@@ -293,16 +295,16 @@ a {
   background: url("../img/first_content_four_bg.jpg") no-repeat;
   background-size: cover;
   float: left;
-  margin-top: 0.86666667rem;
+  margin-top: 1.33333333rem;
   padding-top: 0.13333333rem;
   position: relative;
 }
 .main .content .first .first-item .new-user-content .first-content-four > img {
   position: absolute;
   left: 30%;
-  top: -1.66666667rem;
-  width: 2.42666667rem;
-  height: 1.66666667rem;
+  top: -2rem;
+  width: 2.93333333rem;
+  height: 2.01333333rem;
 }
 .main .content .first .first-item .new-user-content .first-content-four .pick-right-now {
   z-index: 2;
@@ -325,16 +327,15 @@ a {
   line-height: 0.89333333rem;
   margin: 0 auto;
   margin-top: 0.13333333rem;
+  font-size: 0.32rem;
 }
 .main .content .first .first-item .new-user-content .first-content-four .phone-num span {
   color: #cb7434;
-  font-size: 0.18666667rem;
   margin-left: 0.06666667rem;
 }
 .main .content .first .first-item .new-user-content .first-content-four .phone-num > input {
   display: inline-block;
-  width: 2rem;
-  font-size: 0.18666667rem;
+  width: 2.13333333rem;
   color: #999;
 }
 .main .content .first .first-item .new-user-content .first-content-four .validate-code {
@@ -348,19 +349,14 @@ a {
 }
 .main .content .first .first-item .new-user-content .first-content-four .validate-code span {
   color: #cb7434;
-  font-size: 0.18666667rem;
-  margin-left: 5px;
+  font-size: 0.32rem;
+  margin-left: 0.06666667rem;
 }
 .main .content .first .first-item .new-user-content .first-content-four .validate-code > input {
   display: inline-block;
   width: 0.8rem;
-  font-size: 0.18666667rem;
   color: #999;
-}
-.main .content .first .first-item .new-user-content .first-content-four .validate-code i {
-  background-color: #441616;
-  height: 100%;
-  width: 1px;
+  font-size: 0.32rem;
 }
 .main .content .first .first-item .new-user-content .first-content-four .validate-code a {
   display: inline-block;
@@ -368,7 +364,7 @@ a {
   width: 1.68rem;
   border: none;
   border-left: 1px solid #4a1616;
-  font-size: 0.18666667rem;
+  font-size: 0.25333333rem;
   color: #949494;
   padding-left: 0.13333333rem;
   cursor: pointer;
@@ -380,6 +376,7 @@ a {
   background: url("../img/second_bg.png") no-repeat;
   height: 1.2rem;
   overflow: hidden;
+  font-size: 0.32rem;
 }
 .main .content .second .new-user-text .title-num {
   background: url("../img/title_num.jpg") no-repeat;
@@ -390,7 +387,7 @@ a {
   position: relative;
 }
 .main .content .second .new-user-text .title-num span {
-  font-size: 0.4rem;
+  font-size: 0.32rem;
   color: #ca973f;
   position: absolute;
   top: 50%;
@@ -411,7 +408,7 @@ a {
 }
 .main .content .second .new-user-text .title-content .float-title {
   float: left;
-  font-size: 0.18666667rem;
+  font-size: 0.32rem;
   color: #949494;
 }
 .main .content .second .new-user-text .title-content .float-title > span {
@@ -443,7 +440,7 @@ a {
   background-size: cover;
 }
 .main .content .second .second-content .second-content-item > p {
-  font-size: 0.16rem;
+  font-size: 0.26666667rem;
   height: 0.61333333rem;
   line-height: 0.61333333rem;
   color: #ffc657;
@@ -458,7 +455,7 @@ a {
   display: block;
   color: #949494;
   margin-top: 0.46666667rem;
-  font-size: 0.18666667rem;
+  font-size: 0.26666667rem;
   text-align: center;
 }
 .main .content .second .second-content:first-child {
