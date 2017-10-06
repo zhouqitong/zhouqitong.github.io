@@ -310,7 +310,7 @@ a {
   z-index: 2;
   text-align: center;
   background: url("../img/pick_right_now.jpg") no-repeat;
-  width: 4.12rem;
+  width: 4.4rem;
   height: 1.68rem;
   background-size: 100% 100%;
   margin: 0 auto;
@@ -322,7 +322,7 @@ a {
 .main .content .first .first-item .new-user-content .first-content-four .phone-num {
   background-color: #360d0d;
   border: 1px solid #441616;
-  width: 4.21333333rem;
+  width: 4.4rem;
   height: 0.89333333rem;
   line-height: 0.89333333rem;
   margin: 0 auto;
@@ -337,11 +337,13 @@ a {
   display: inline-block;
   width: 2.13333333rem;
   color: #999;
+  background-color: #360d0d;
+  border: none;
 }
 .main .content .first .first-item .new-user-content .first-content-four .validate-code {
   background-color: #360d0d;
   border: 1px solid #441616;
-  width: 4.21333333rem;
+  width: 4.4rem;
   height: 0.89333333rem;
   line-height: 0.89333333rem;
   margin: 0 auto;
@@ -357,11 +359,13 @@ a {
   width: 0.8rem;
   color: #999;
   font-size: 0.32rem;
+  background-color: #360d0d;
+  border: none;
 }
 .main .content .first .first-item .new-user-content .first-content-four .validate-code a {
   display: inline-block;
   background-color: #360d0d;
-  width: 1.68rem;
+  width: 1.66666667rem;
   border: none;
   border-left: 1px solid #4a1616;
   font-size: 0.25333333rem;
@@ -416,12 +420,12 @@ a {
 }
 .main .content .second .second-content {
   overflow: hidden;
-  padding-left: 0.6rem;
-  padding-right: 0.33333333rem;
+  padding-left: 0.46666667rem;
+  padding-right: 0.26666667rem;
 }
 .main .content .second .second-content .second-content-item {
   background: url("../img/second_item_bg.jpg") no-repeat;
-  width: 4rem;
+  width: 4.13333333rem;
   height: 5.45333333rem;
   margin-top: 0.4rem;
   background-size: cover;
@@ -440,7 +444,7 @@ a {
   background-size: cover;
 }
 .main .content .second .second-content .second-content-item > p {
-  font-size: 0.26666667rem;
+  font-size: 0.16rem;
   height: 0.61333333rem;
   line-height: 0.61333333rem;
   color: #ffc657;
@@ -455,7 +459,7 @@ a {
   display: block;
   color: #949494;
   margin-top: 0.46666667rem;
-  font-size: 0.26666667rem;
+  font-size: 0.18666667rem;
   text-align: center;
 }
 .main .content .second .second-content:first-child {

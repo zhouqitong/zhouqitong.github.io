@@ -291,7 +291,7 @@ a {
   margin-left: 0rem;
 }
 .main .content .first .first-item .new-user-content .first-content-four {
-  width: 10.90909091rem;
+  width: 11.81818182rem;
   height: 10.36363636rem;
   margin-left: 0.22727273rem;
   background: url("../img/first_content_four_bg.jpg") no-repeat;
@@ -311,7 +311,7 @@ a {
 .main .content .first .first-item .new-user-content .first-content-four .pick-right-now {
   text-align: center;
   background: url("../img/pick_right_now.jpg") no-repeat;
-  width: 10.04545455rem;
+  width: 11.13636364rem;
   height: 4.31818182rem;
   background-size: 100% 100%;
   margin: 0 auto;
@@ -323,7 +323,7 @@ a {
 .main .content .first .first-item .new-user-content .first-content-four .phone-num {
   background-color: #360d0d;
   border: 1px solid #441616;
-  width: 10.09090909rem;
+  width: 11.13636364rem;
   height: 2.18181818rem;
   line-height: 2.18181818rem;
   margin: 0 auto;
@@ -332,18 +332,22 @@ a {
 .main .content .first .first-item .new-user-content .first-content-four .phone-num span {
   color: #cb7434;
   font-size: 0.63636364rem;
-  margin-left: 5px;
+  width: 3.18181818rem;
+  margin-left: 0.22727273rem;
+  display: inline-block;
 }
 .main .content .first .first-item .new-user-content .first-content-four .phone-num > input {
   display: inline-block;
   width: 5.45454545rem;
   font-size: 0.63636364rem;
   color: #999;
+  background-color: #360d0d;
+  border: none;
 }
 .main .content .first .first-item .new-user-content .first-content-four .validate-code {
   background-color: #360d0d;
   border: 1px solid #441616;
-  width: 10.09090909rem;
+  width: 11.13636364rem;
   height: 2.18181818rem;
   line-height: 2.18181818rem;
   margin: 0 auto;
@@ -351,14 +355,18 @@ a {
 }
 .main .content .first .first-item .new-user-content .first-content-four .validate-code span {
   color: #cb7434;
+  width: 3.18181818rem;
+  display: inline-block;
   font-size: 0.63636364rem;
-  margin-left: 5px;
+  margin-left: 0.22727273rem;
 }
 .main .content .first .first-item .new-user-content .first-content-four .validate-code > input {
   display: inline-block;
   width: 1.81818182rem;
   font-size: 0.63636364rem;
   color: #999;
+  background-color: #360d0d;
+  border: none;
 }
 .main .content .first .first-item .new-user-content .first-content-four .validate-code a {
   display: inline-block;

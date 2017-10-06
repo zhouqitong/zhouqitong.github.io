@@ -21,7 +21,7 @@ $(function () {
 				countdown = 60;
 				send = true;
 			} else {
-				$(ele).html(countdown + "s重新发送");
+				$(ele).html(countdown + "s后重发");
 				countdown--;
 			}
 		}
