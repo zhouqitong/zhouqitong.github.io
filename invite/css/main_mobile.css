@@ -250,6 +250,9 @@ a {
   color: #949494;
   text-align: center;
 }
+.main .content .first .first-item .new-user-content .row-one .margin-left {
+  margin-left: 0.13333333rem;
+}
 .main .content .first .first-item .new-user-content .first-content-one {
   float: left;
   margin-top: 0.46666667rem;

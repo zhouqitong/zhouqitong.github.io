@@ -247,12 +247,13 @@ a {
   height: 100%;
   background: url("../img/main_bg.jpg") no-repeat;
   background-size: 100% 100%;
+  overflow: hidden;
 
   .content {
     margin: 0 auto;
     .lessRem(width, 980);
     .lessRem(height, 1071);
-    .lessRem(padding-top, 466);
+    .lessRem(margin-top, 466);
     .first {
       color: #fff;
       overflow: hidden;
@@ -329,11 +330,14 @@ a {
                 text-align: center;
               }
             }
+            .margin-left{
+              .lessRem(margin-left,10);
+            }
           }
 
           .first-content-one {
             float: left;
-            .lessRem(width, 183);
+            .lessRem(width, 210);
             .lessRem(height, 270);
             .lessRem(padding-left, 8);
             .lessRem(padding-right, 8);
@@ -344,7 +348,7 @@ a {
           }
           .first-content-two {
             float: left;
-            .lessRem(width, 183);
+            .lessRem(width, 170);
             .lessRem(height, 270);
             .lessRem(margin-left, 5);
             .lessRem(padding-left, 8);
