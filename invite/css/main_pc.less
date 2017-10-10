@@ -32,8 +32,6 @@
     @{name}: @param1/@font-size-base*1rem;
 }
 
-
-
 html {
   color: #000;
   background: #FFF;
@@ -226,92 +224,95 @@ a {
   color: #000;
   text-decoration: none;
 }
-@fontColorLightYellow:#ffc657;
+
+@fontColorLightYellow: #ffc657;
 @fontColorYellow: #ca973f;
 @fontColorRed: #f93a3a;
 @fontColorGray: #949494;
 @fontColorDarkGray: #999;
 @fontColorDarkYellow: #cb7434;
-.right{
+.right {
   float: right;
 }
-.left{
+
+.left {
   float: left;
 }
-.main{
+
+.main {
   position: relative;
-  background :url("../img/main_bg.jpg") no-repeat;
-  width:100%;
+  background: url("../img/main_bg.jpg") no-repeat;
+  width: 100%;
   //.lessRem(height,1648);
-  height:100%;
-  background-size:cover;
+  height: 100%;
+  background-size: cover;
   //>img{
   //  width:100%;
   //  height:100%;
   //
   //
   //}
-  .content{
-    margin:0 auto;
-    .lessRem(width,980);
-    .lessRem(height,1071);
-    .lessRem(padding-top,466);
-    .first{
-      color:#fff;
+  .content {
+    margin: 0 auto;
+    .lessRem(width, 980);
+    .lessRem(height, 1071);
+    .lessRem(padding-top, 466);
+    .first {
+      color: #fff;
       overflow: hidden;
 
-      .first-item{
-        width:50%;
+      .first-item {
+        width: 50%;
         float: left;
-        .new-user-text{
+        .new-user-text {
           display: inline-block;
-          .lessRem(margin-top,25);
-          .lessRem(height,105);
-          .title-num{
+          .lessRem(margin-top, 25);
+          .lessRem(height, 105);
+          .title-num {
             background: url("../img/title_num.jpg") no-repeat;
             float: left;
-            .lessRem(width,56);
-            .lessRem(height,72);
+            .lessRem(width, 56);
+            .lessRem(height, 72);
             background-size: cover;
             position: relative;
-            span{
-              .lessRem(font-size,30);
-              color:@fontColorYellow;
+            span {
+              .lessRem(font-size, 30);
+              color: @fontColorYellow;
               .lessTransformCenter;
-              .lessRem(margin-top,-10);
+              .lessRem(margin-top, -10);
             }
 
           }
-          .title-content{
-            .lessRem(margin-left,60);
+          .title-content {
+            .lessRem(margin-left, 60);
             overflow: hidden;
-            .red-title{
-              color:@fontColorRed;
-              .lessRem(font-size,36);
+            .red-title {
+              color: @fontColorRed;
+              .lessRem(font-size, 36);
             }
-            .float-title{
+            .float-title {
               float: left;
-              .lessRem(font-size,14);
-              color:@fontColorGray;
-              &:before{
-                content:"";
+              .lessRem(font-size, 14);
+              color: @fontColorGray;
+              &:before {
+                content: "";
                 background: url("../img/ic_front_text.png") no-repeat;
-                .lessRem(width,16);
-                .lessRem(height,16);
-                background-size:cover;
+                .lessRem(width, 16);
+                .lessRem(height, 16);
+                background-size: cover;
                 display: inline-block;
-                text-indent:10px;
-                .lessRem(margin-right,10);
+                text-indent: 10px;
+                .lessRem(margin-right, 10);
               }
-              >span{
-                color:@fontColorDarkYellow;
+              > span {
+                color: @fontColorDarkYellow;
               }
             }
           }
-          .title-content-two{
-            .lessRem(margin-top,55);
+          .title-content-two {
+            .lessRem(margin-top, 55);
             margin-left: 0;
-            .lessRem(margin-right,60);
+            .lessRem(margin-right, 60);
           }
         }
 
@@ -338,135 +339,132 @@ a {
             float: left;
             .lessRem(width, 183);
             .lessRem(height, 265);
-            .lessRem(padding-left,8);
-            .lessRem(padding-right,8);
-            .lessRem(padding-bottom,8);
-            .lessRem(margin-left,65);
+            .lessRem(padding-left, 8);
+            .lessRem(padding-right, 8);
+            .lessRem(padding-bottom, 8);
+            .lessRem(margin-left, 65);
             background: url("../img/first_content_one_bg.jpg") no-repeat;
             background-size: cover;
-
 
           }
           .first-content-two {
             float: left;
             .lessRem(width, 183);
             .lessRem(height, 265);
-            .lessRem(margin-left,5);
-            .lessRem(padding-left,8);
-            .lessRem(padding-right,8);
-            .lessRem(padding-bottom,8);
+            .lessRem(margin-left, 5);
+            .lessRem(padding-left, 8);
+            .lessRem(padding-right, 8);
+            .lessRem(padding-bottom, 8);
             background: url("../img/first_content_two_bg.jpg") no-repeat;
             background-size: cover;
-            >p{
-              color:@fontColorDarkYellow;
-              .lessRem(font-size,14);
+            > p {
+              color: @fontColorDarkYellow;
+              .lessRem(font-size, 14);
               text-align: center;
-              .lessRem(margin-left,-8);
+              .lessRem(margin-left, -8);
             }
           }
-          .first-content-three{
-            .lessRem(margin-left,0)
+          .first-content-three {
+            .lessRem(margin-left, 0)
           }
-          .first-content-four{
-            .lessRem(width,260);
-            .lessRem(height,228);
-            .lessRem(margin-left,5);
+          .first-content-four {
+            .lessRem(width, 260);
+            .lessRem(height, 228);
+            .lessRem(margin-left, 5);
             background: url("../img/first_content_four_bg.jpg") no-repeat;
             background-size: cover;
             float: left;
-            .lessRem(margin-top,35);
-            .lessRem(padding-top,10);
+            .lessRem(margin-top, 35);
+            .lessRem(padding-top, 10);
             position: relative;
-            >img{
+            > img {
               position: absolute;
-              right:-20px;
-              .lessRem(top,-125);
-              .lessRem(width,182);
-              .lessRem(height,125);
+              right: -20px;
+              .lessRem(top, -125);
+              .lessRem(width, 182);
+              .lessRem(height, 125);
 
             }
-            .pick-right-now{
+            .pick-right-now {
               text-align: center;
 
               background: url("../img/pick_right_now.jpg") no-repeat;
-              .lessRem(width,245);
+              .lessRem(width, 245);
 
-              .lessRem(height,95);
+              .lessRem(height, 95);
               background-size: 100% 100%;
-              margin:0 auto;
-              .lessRem(font-size,36);
-              color:@fontColorLightYellow;
-              .lessRem(line-height,95);
+              margin: 0 auto;
+              .lessRem(font-size, 36);
+              color: @fontColorLightYellow;
+              .lessRem(line-height, 95);
               cursor: pointer;
             }
-            .phone-num{
+            .phone-num {
 
               background-color: #360d0d;
               border: 1px solid #441616;
 
-              .lessRem(width,245);
-              .lessRem(height,48);
-              .lessRem(line-height,48);
+              .lessRem(width, 245);
+              .lessRem(height, 48);
+              .lessRem(line-height, 48);
 
-              margin:0 auto;
-              .lessRem(margin-top,10);
-              span{
+              margin: 0 auto;
+              .lessRem(margin-top, 10);
+              span {
                 color: @fontColorDarkYellow;
-                
 
-                .lessRem(font-size,14);
-                .lessRem(width,70);
-                .lessRem(margin-left,5);
+                .lessRem(font-size, 14);
+                .lessRem(width, 70);
+                .lessRem(margin-left, 5);
                 display: inline-block;
 
               }
-              >input{
+              > input {
                 display: inline-block;
-                .lessRem(width,120);
-                .lessRem(font-size,14);
-                color:@fontColorDarkGray;
+                .lessRem(width, 120);
+                .lessRem(font-size, 14);
+                color: @fontColorDarkGray;
                 background-color: #360d0d;
-                border:none;
+                border: none;
               }
             }
-            .validate-code{
+            .validate-code {
               background-color: #360d0d;
               border: 1px solid #441616;
 
-              .lessRem(width,245);
+              .lessRem(width, 245);
 
-              .lessRem(height,48);
-              .lessRem(line-height,48);
-              margin:0 auto;
-              .lessRem(margin-top,5);
-              span{
-                
+              .lessRem(height, 48);
+              .lessRem(line-height, 48);
+              margin: 0 auto;
+              .lessRem(margin-top, 5);
+              span {
+
                 color: @fontColorDarkYellow;
-                .lessRem(width,70);
+                .lessRem(width, 70);
                 display: inline-block;
-                .lessRem(font-size,14);
-                .lessRem(margin-left,5);
+                .lessRem(font-size, 14);
+                .lessRem(margin-left, 5);
               }
-              >input{
+              > input {
                 display: inline-block;
-                .lessRem(width,40);
-                .lessRem(font-size,14);
-                color:@fontColorDarkGray;
+                .lessRem(width, 40);
+                .lessRem(font-size, 14);
+                color: @fontColorDarkGray;
                 background-color: #360d0d;
-                border:none;
+                border: none;
               }
 
-              a{
+              a {
                 display: inline-block;
                 background-color: #360d0d;
-                .lessRem(width,90);
-                border:none;
+                .lessRem(width, 90);
+                border: none;
                 border-left: 1px solid #4a1616;
 
-
-                .lessRem(font-size,14);
-                .lessRem(padding-left,10);
-                color:@fontColorGray;
+                .lessRem(font-size, 14);
+                .lessRem(padding-left, 10);
+                color: @fontColorGray;
                 cursor: pointer;
               }
 
@@ -476,112 +474,170 @@ a {
       }
 
     }
-    .second{
-      .lessRem(margin-top,50);
-      ;
-      .new-user-text{
+    .second {
+      .lessRem(margin-top, 50);;
+      .new-user-text {
         background: url("../img/second_bg.png") no-repeat;
-        .lessRem(height,90);
-        overflow: hidden;
-        ;
-        .title-num{
+        .lessRem(height, 90);
+        overflow: hidden;;
+        .title-num {
           background: url("../img/title_num.jpg") no-repeat;
           float: left;
-          .lessRem(width,56);
-          .lessRem(height,72);
+          .lessRem(width, 56);
+          .lessRem(height, 72);
           background-size: cover;
           position: relative;
-          span{
-            .lessRem(font-size,30);
-            color:@fontColorYellow;
+          span {
+            .lessRem(font-size, 30);
+            color: @fontColorYellow;
             .lessTransformCenter;
-            .lessRem(margin-top,-10);
+            .lessRem(margin-top, -10);
           }
 
         }
-        .title-content{
-          .lessRem(margin-left,70);
+        .title-content {
+          .lessRem(margin-left, 70);
           overflow: hidden;
-          .red-title{
-            color:@fontColorRed;
-            .lessRem(font-size,36);
+          .red-title {
+            color: @fontColorRed;
+            .lessRem(font-size, 36);
 
           }
-          .float-title{
+          .float-title {
             float: left;
             margin-left: 5px;
-            .lessRem(font-size,14);
-            color:@fontColorGray;
-            &:before{
-              content:"";
+            .lessRem(font-size, 14);
+            color: @fontColorGray;
+            &:before {
+              content: "";
               background: url("../img/ic_front_text.png") no-repeat;
-              .lessRem(width,16);
-              .lessRem(height,16);
-              background-size:cover;
+              .lessRem(width, 16);
+              .lessRem(height, 16);
+              background-size: cover;
               display: inline-block;
-              text-indent:10px;
-              .lessRem(margin-right,10);
+              text-indent: 10px;
+              .lessRem(margin-right, 10);
             }
-            >span{
-              color:@fontColorDarkYellow;
+            > span {
+              color: @fontColorDarkYellow;
             }
           }
         }
       }
-      .second-content{
+      .second-content {
         .lessRem(padding-left, 65);
         .lessRem(padding-right, 50);
         overflow: hidden;
-        .second-content-item{
+        .second-content-item {
 
           background: url("../img/second_item_bg.jpg") no-repeat;
-          .lessRem(width,270);
-          .lessRem(height,409);
-          ;
+          .lessRem(width, 270);
+          .lessRem(height, 409);;
           background-size: cover;
 
           display: inline-block;
           position: relative;
           text-align: center;
-          .lessRem(margin-left,15);;
-          &:nth-child(1){
+          .lessRem(margin-left, 15);;
+          &:nth-child(1) {
             margin-left: 0;
 
           }
 
-          >p{
-            .lessRem(font-size,18);
-            .lessRem(height,46);
-            .lessRem(line-height,46);
+          > p {
+            .lessRem(font-size, 18);
+            .lessRem(height, 46);
+            .lessRem(line-height, 46);
             color: #cb7434;
           }
 
-          >img{
-            .lessRem(width,221);
-            .lessRem(height,208);
-            margin:0 auto;
-            .lessRem(margin-top,25);
+          > img {
+            .lessRem(width, 221);
+            .lessRem(height, 208);
+            margin: 0 auto;
+            .lessRem(margin-top, 25);
           }
-          .item-bottom{
+          .item-bottom {
             display: block;
-            color:@fontColorGray;
-            .lessRem(margin-top,35);
-            .lessRem(font-size,14);
-            text-align: center;
-            ;
+            color: @fontColorGray;
+            .lessRem(margin-top, 35);
+            .lessRem(font-size, 14);
+            text-align: center;;
           }
         }
-        &:first-child{
+        &:first-child {
           margin-left: 0;
         }
-
 
       }
     }
   }
-  .margin-left-clear{
-    margin-left:0;
+  .margin-left-clear {
+    margin-left: 0;
+  }
+  .layer {
+    position: fixed;
+    transition: .5s;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .6);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 10;
+
+  }
+  .dialog {
+    .lessTransformCenter;
+    .lessRem(width, 606);
+    .lessRem(height, 530);
+    background: url("../img/dialog_pc.png") no-repeat;
+    background-size: 100% 100%;
+    color: @fontColorLightYellow;
+    text-align: center;
+    .dialog-title {
+      background: url("../img/dialog_title_bg.png") no-repeat;
+      background-size: 100% 100%;
+      .lessRem(font-size, 36);
+      .lessRem(margin-top, 92);
+    }
+    .dialog-content {
+      .lessRem(font-size, 28);
+      .lessRem(margin-top,100);
+    }
+    .dialog-download {
+      .lessRem(width,181);
+      .lessRem(height,77);
+      .lessRem(line-height,77);
+      .lessTransformCenterHorizontal;
+      .lessRem(margin-top,100);
+      display: block;
+      cursor: pointer;
+      color: @fontColorLightYellow;
+      background: url("../img/download_bg_pc.jpg") no-repeat;
+      background-size:100% 100%;
+      .lessRem(font-size, 36);
+      text-decoration: none;
+    }
   }
 
+  .layer-white {
+    position: fixed;
+    transition: .5s;
+    width: 100%;
+    height: 100%;
+    background: rgba(238, 238, 238, .8);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99eeeeee, endColorstr=#99eeeeee);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 9;
+  }
+  .hide{
+    display: none;
+  }
 }
 

@@ -477,3 +477,76 @@ a {
 .main .margin-left-clear {
   margin-left: 0;
 }
+.main .layer {
+  position: fixed;
+  transition: .5s;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, 0, endColorstr=#99000000, 0);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 10;
+}
+.main .dialog {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: 50% 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -webkit-transform-origin: 50% 50%;
+  width: 27.54545455rem;
+  height: 24.09090909rem;
+  background: url("../img/dialog_pc.png") no-repeat;
+  background-size: 100% 100%;
+  color: #ffc657;
+  text-align: center;
+}
+.main .dialog .dialog-title {
+  background: url("../img/dialog_title_bg.png") no-repeat;
+  background-size: 100% 100%;
+  font-size: 1.63636364rem;
+  margin-top: 4.18181818rem;
+}
+.main .dialog .dialog-content {
+  font-size: 1.27272727rem;
+  margin-top: 4.54545455rem;
+}
+.main .dialog .dialog-download {
+  width: 8.22727273rem;
+  height: 3.5rem;
+  line-height: 3.5rem;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  transform-origin: 50% 0;
+  -webkit-transform: translate(-50%, 0);
+  -webkit-transform-origin: 50% 0;
+  margin-top: 4.54545455rem;
+  display: block;
+  cursor: pointer;
+  color: #ffc657;
+  background: url("../img/download_bg_pc.jpg") no-repeat;
+  background-size: 100% 100%;
+  font-size: 1.63636364rem;
+  text-decoration: none;
+}
+.main .layer-white {
+  position: fixed;
+  transition: .5s;
+  width: 100%;
+  height: 100%;
+  background: rgba(238, 238, 238, 0.8);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99eeeeee, ee, endColorstr=#99eeeeee, ee);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 9;
+}
+.main .hide {
+  display: none;
+}

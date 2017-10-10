@@ -1,3 +1,16 @@
+var u = navigator.userAgent;
+var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+
+var ios_address ="https://itunes.apple.com/cn/app/fen-bi-wang/id852188634";
+var android_address ="https://planet.fbcontent.cn/apps/download/gaozhong-7.1.2.apk";
+var download_address = ios_address;
+
+if(isAndroid){
+	download_address= android_address;
+}else{
+	download_address = ios_address;
+}
 $(function () {
 	var $phonenum = $("#phonenum");
 	var $varifyCode = $("#varifyCode");
@@ -27,13 +40,19 @@ $(function () {
 		}
 	});
 	
+	
 
 	
 	$("#pickRightNow").click(function () {
 		if(checkInput()){
 			// 网络请求
-			alert("网络请求");
+			$(".layer").show();
 		}
+	});
+	
+	$(".dialog-download").click(function () {
+		$(".layer").hide();
+		window.open(download_address);
 	});
 	function checkMobile(phonenum){
 		if(!(/^1[3|4|5|7|8][0-9]\d{8}$/.test(phonenum))){
@@ -49,6 +68,7 @@ $(function () {
 		}
 		if(!(/^\d{4}$/.test($varifyCode.val()))){
 			alert("请输入正确的验证码!");
+	        $("#varifyCode").focus();
 			return false;
 		}
 		return true;
