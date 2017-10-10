@@ -165,10 +165,10 @@ a {
 }
 .main {
   position: relative;
-  background: url("../img/main_bg.jpg") no-repeat;
   width: 100%;
   height: 100%;
-  background-size: cover;
+  background: url("../img/main_bg.jpg") no-repeat;
+  background-size: 100% 100%;
 }
 .main .content {
   margin: 0 auto;
@@ -262,7 +262,7 @@ a {
 .main .content .first .first-item .new-user-content .first-content-one {
   float: left;
   width: 8.31818182rem;
-  height: 12.04545455rem;
+  height: 12.27272727rem;
   padding-left: 0.36363636rem;
   padding-right: 0.36363636rem;
   padding-bottom: 0.36363636rem;
@@ -273,7 +273,7 @@ a {
 .main .content .first .first-item .new-user-content .first-content-two {
   float: left;
   width: 8.31818182rem;
-  height: 12.04545455rem;
+  height: 12.27272727rem;
   margin-left: 0.22727273rem;
   padding-left: 0.36363636rem;
   padding-right: 0.36363636rem;
@@ -292,7 +292,7 @@ a {
 }
 .main .content .first .first-item .new-user-content .first-content-four {
   width: 11.81818182rem;
-  height: 10.36363636rem;
+  height: 10.59090909rem;
   margin-left: 0.22727273rem;
   background: url("../img/first_content_four_bg.jpg") no-repeat;
   background-size: cover;

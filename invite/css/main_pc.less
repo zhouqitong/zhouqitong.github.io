@@ -55,6 +55,7 @@ html {
   }
 }
 
+
 /*
 	TODO remove settings on BODY since we can't namespace it.
 */
@@ -163,6 +164,7 @@ select {
   font-family: inherit;
   font-size: inherit;
   font-weight: inherit;
+
 }
 
 /*to enable resizing for IE*/
@@ -241,17 +243,11 @@ a {
 
 .main {
   position: relative;
-  background: url("../img/main_bg.jpg") no-repeat;
   width: 100%;
-  //.lessRem(height,1648);
   height: 100%;
-  background-size: cover;
-  //>img{
-  //  width:100%;
-  //  height:100%;
-  //
-  //
-  //}
+  background: url("../img/main_bg.jpg") no-repeat;
+  background-size: 100% 100%;
+
   .content {
     margin: 0 auto;
     .lessRem(width, 980);
@@ -338,19 +334,19 @@ a {
           .first-content-one {
             float: left;
             .lessRem(width, 183);
-            .lessRem(height, 265);
+            .lessRem(height, 270);
             .lessRem(padding-left, 8);
             .lessRem(padding-right, 8);
             .lessRem(padding-bottom, 8);
             .lessRem(margin-left, 65);
             background: url("../img/first_content_one_bg.jpg") no-repeat;
             background-size: cover;
-
           }
           .first-content-two {
             float: left;
             .lessRem(width, 183);
-            .lessRem(height, 265);
+            .lessRem(height, 270);
+
             .lessRem(margin-left, 5);
             .lessRem(padding-left, 8);
             .lessRem(padding-right, 8);
@@ -369,7 +365,7 @@ a {
           }
           .first-content-four {
             .lessRem(width, 260);
-            .lessRem(height, 228);
+            .lessRem(height, 233);
             .lessRem(margin-left, 5);
             background: url("../img/first_content_four_bg.jpg") no-repeat;
             background-size: cover;
