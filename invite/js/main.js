@@ -3,7 +3,7 @@ var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终
 var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
 
 var ios_address ="https://itunes.apple.com/cn/app/fen-bi-wang/id852188634";
-var android_address ="https://planet.fbcontent.cn/apps/download/gaozhong-7.1.2.apk";
+var android_address ="http://sj.qq.com/myapp/detail.htm?apkName=com.fenbi.android.gaozhong";
 var download_address = ios_address;
 
 if(isAndroid){
