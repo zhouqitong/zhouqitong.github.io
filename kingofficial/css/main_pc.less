@@ -247,6 +247,7 @@ a {
   width: 100%;
   background-color: #fff;
   z-index: 2;
+  border-bottom: 1px solid #ccc;
   .content {
     .lessRem(width, 1200);
 
@@ -259,18 +260,16 @@ a {
       display: inline-block;
       .lessRem(width, 132);
       .lessRem(height, 80);
-
       > img {
         position: absolute;
         top: 50%;
         .lessRem(margin-top, -20);
-
       }
     }
 
     ul {
-      list-style-type: none;
       display: inline-block;
+      list-style-type: none;
 
       li {
         float: left;
@@ -286,7 +285,7 @@ a {
           display: block;
           text-align: center;
           .lessRem(padding-top, 15);
-
+          text-decoration: none;
           //.lessTransformCenterVertical;
           .title {
             .lessRem(font-size, 18);
@@ -389,108 +388,119 @@ a {
 //    &:after {
 //      clear: both;
 //    }
-.right {
-  float: right;
-}
 
 #fullpage {
   position: relative;
   #section1 {
-    //background: url("../img/one-bg.jpg") no-repeat;
+    background: url("../img/one-bg.jpg") no-repeat;
+
     width: 100%;
-    height:100%;
-    //background-size: 100% 100%;
+    height: 100%;
+    .content {
+      .lessRem(width, 1200);
 
-    //background-size: 100% 100%;
-    //background-size: contain;
-    //border: 1px solid #f00;
-    //background: url("../img/one-bg.jpg") no-repeat;
-    //width: 100%;
-    //height: 100%;
-    //.lessRem(height,860);
-    //height: 766px;
-    //background-size: 100% 100%;
-    .bg_img {
-      width: 100%;
-      height: 100%;
-    }
-    .download {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      font-size: 18px;
+      margin: 0 auto;
+      overflow: hidden;
 
-      margin-top: 100px;
-      margin-left: 20px;
+      .left {
+        background: url("../img/one-left-bg.png") no-repeat;
+        float: left;
+        .lessRem(margin-top, 175);
+        .lessRem(width, 577);
+        .lessRem(height, 604);
+        background-size: 100% 100%;
+      }
+      .right {
+        float: right;
+        .lessRem(margin-top, 175);
+        .lessRem(width, 577);
+        .lessRem(height, 604);
 
-      a {
-        display: inline-block;
-        width: 190px;
-        height: 50px;
-        line-height: 50px;
-        border-radius: 30px;
-        color: #ffffff;
-        > span {
-          margin-left: 70px;
+        overflow: hidden;
+        position: relative;
+        .top {
+          .lessRem(width, 577);
+          .lessRem(height, 303);
+          background: url("../img/one-right-bg.png") no-repeat;
+          background-size: 100% 100%;
+
+        }
+        .download {
+          font-size: 18px;
+          .lessRem(font-size, 24);
+          position: absolute;
+          .lessRem(bottom, 110);
+          a {
+            display: inline-block;
+            .lessRem(width, 250);
+            .lessRem(height, 70);
+            .lessRem(line-height, 70);
+            .lessRem(border-radius, 30);
+            color: #ffffff;
+            cursor: pointer;
+            text-align: center;
+            > span {
+              .lessRem(margin-left, 30);
+            }
+          }
+          .ios {
+            background: #3e81e4 url("../img/ios.png") no-repeat;
+            .lessBgSizeOrPos(background-size, 39, 47);
+            .lessRem(background-position, 30);
+            .lessRem(margin-right, 20);
+          }
+          .android {
+            background: #3e81e4 url("../img/android.png") no-repeat;
+            //background-size: 41px 50px;
+            .lessBgSizeOrPos(background-size, 41, 50);
+            .lessRem(background-position, 30);
+          }
         }
       }
-      .ios {
-        background: #3e81e4 url("../img/ios.png") no-repeat;
-        //background-size: 39px 47px;
-        background-size: 30px 36px;
-        background-position: 30px;
 
-        margin-right: 10px;
+      #meteor0 {
+        //
+        position: absolute;
+        top: -100px;
+        right: 200px;
       }
-      .android {
-        background: #3e81e4 url("../img/android.png") no-repeat;
-        //background-size: 41px 50px;
-        background-size: 30px 37px;
-        background-position: 30px;
+      #meteor1 {
+        //
+        position: absolute;
+        top: -100px;
+        right: 100px;
+      }
+      #meteor2 {
+        //
+        position: absolute;
+        top: -100px;
+        right: -110px;
+      }
+      #meteor3 {
+        //
+        position: absolute;
+        top: -100px;
+        left: 100px;
+      }
+      #meteor4 {
+        //
+        position: absolute;
+        top: -100px;
+        left: 400px;
+      }
+      #meteor5 {
+        //
+        position: absolute;
+        top: -100px;
+        right: 50px;
       }
     }
-    #meteor0 {
-      //
-      position: absolute;
-      top: -100px;
-      right: 200px;
-    }
-    #meteor1 {
-      //
-      position: absolute;
-      top: -100px;
-      right: 100px;
-    }
-    #meteor2 {
-      //
-      position: absolute;
-      top: -100px;
-      right: -110px;
-    }
-    #meteor3 {
-      //
-      position: absolute;
-      top: -100px;
-      left: 100px;
-    }
-    #meteor4 {
-      //
-      position: absolute;
-      top: -100px;
-      left: 400px;
-    }
-    #meteor5 {
-      //
-      position: absolute;
-      top: -100px;
-      right: 50px;
-    }
+
   }
   #section2 {
     width: 100%;
-    height:100%;
+    height: 100%;
     overflow: hidden;
-    
     .title {
       margin: 0 auto;
       .lessRem(margin-top, 58);
@@ -523,17 +533,26 @@ a {
     }
     .product {
       .lessRem(width, 1200);
-
       margin: 0 auto;
       .lessRem(margin-top, 45);
       overflow: hidden;
+      .left {
+        width: 49%;
+        overflow: hidden;
+        float: left;
+      }
+      .right {
+        width: 49%;
+        overflow: hidden;
+        float: right;
+      }
       .item {
         float: left;
         .lessRem(width, 285);
         .lessRem(height, 288);
         background-color: #fafafa;
-        .lessRem(margin-left, 20);
-        .lessRem(margin-bottom, 20);
+        .lessRem(margin-left, 16);
+        .lessRem(margin-bottom, 10);
 
         text-align: center;
         position: relative;
@@ -561,14 +580,13 @@ a {
         }
 
       }
-      .item:nth-child(1), .item:nth-child(5) {
+      .item:nth-child(1), .item:nth-child(3) {
         margin-left: 0;
       }
 
     }
   }
   #section3 {
-    background-color: #fafafa;
     height: 100%;
     width: 100%;
     overflow: hidden;
@@ -576,6 +594,8 @@ a {
       width: 100%;
       .lessRem(height, 260);
       position: relative;
+      background:url("../img/three-bg.jpg") no-repeat;
+      background-size:100% 100%;
       > p {
         .lessRem(font-size, 30);
         color: #fff;
@@ -622,17 +642,22 @@ a {
       margin: 0 auto;
       background-color: #fff;
       overflow: hidden;
+      .left{
+      }
+      .right{
+
+      }
       .item {
+        .lessRem(margin-top, 50);
+
         .lessRem(width, 400);
         .lessRem(height, 400);
-
         text-align: center;
         float: left;
-        > img {
-          .lessRem(margin-top, 50);
+         img {
+
           .lessRem(width, 62);
           .lessRem(height, 62);
-
         }
         .title {
           .lessRem(margin-top, 15);
@@ -652,9 +677,8 @@ a {
           }
           .right {
             .lessRem(font-size, 16);
-            text-align: left;
+            text-align: center;
             display: block;
-            float: left;
           }
         }
         .title1 {
@@ -676,6 +700,14 @@ a {
       .list {
         .lessRem(margin-top, 20);
         overflow: hidden;
+        .left {
+          width: 49%;
+          float: left;
+        }
+        .right {
+          width: 49%;
+          float: right;
+        }
         .item {
           float: left;
           .lessRem(margin-left, 55);
@@ -695,9 +727,10 @@ a {
   }
   #section4 {
     .top {
-
       width: 100%;
       .lessRem(height, 260);
+      background: url("../img/four-bg.jpg") no-repeat;
+      background-size: 100% 100%;
       position: relative;
       .title {
         .lessRem(font-size, 30);
@@ -723,16 +756,24 @@ a {
         .lessRem(height, 260);
         display: block;
       }
-
     }
-
     .list {
       overflow: hidden;
       .lessRem(margin-top, 10);
+      .left {
+        width: 49.5%;
+        overflow: hidden;
+        float: left;
+      }
+      .right {
+        width: 49.5%;
+        float: right;
+        overflow: hidden;
+      }
       .item {
         .lessRem(width, 470);
         .lessRem(height, 280);
-        .lessRem(margin-left, 13);
+        .lessRem(margin-left, 10);
         position: relative;
         > img {
           width: 100%;
@@ -754,7 +795,11 @@ a {
           top: 40%;
           left: 49%;
           .lessRem(font-size, 16);
+          .lessRem(width,192);
           color: #fff;
+        }
+        &:first-child {
+          margin-left: 0;
         }
       }
 
@@ -795,15 +840,12 @@ a {
             background: url("../img/four-plateform01.png") left center no-repeat;
             float: left;
             .lessBgSizeOrPos(background-size, 107, 75);
-
           }
           &:nth-child(2) {
             background: url("../img/four-plateform02.png") no-repeat;
             .lessBgSizeOrPos(background-size, 96, 95);
             .lessBgSizeOrPos1Param(background-position, 140);
-
             float: right;
-
           }
 
           .desc {
@@ -833,9 +875,11 @@ a {
   }
   #section5 {
     .top {
-
+      background: url("../img/five-bg.jpg") no-repeat;
+      background-size: 100% 100%;
       width: 100%;
       .lessRem(height, 140);
+
       position: relative;
       .title {
         .lessRem(font-size, 30);
@@ -865,21 +909,21 @@ a {
     .content {
       .lessRem(width, 1200);
       margin: 0 auto;
+      .title1 {
+        .lessRem(font-size, 30);
+        .lessRem(margin-top, 45);
+        .lessRem(margin-bottom, 15);
 
+        text-align: center;
+      }
       .company-intro {
 
-        .title1 {
-          .lessRem(font-size, 30);
-          .lessRem(margin-top, 45);
-          .lessRem(margin-bottom, 15);
 
-          text-align: center;
-        }
         .title2 {
           .lessRem(padding-left, 75);
           .lessRem(font-size, 16);
           color: #999;
-          .lessRem(text-indent, 160);
+          .lessRem(text-indent, 60);
         }
 
       }
@@ -907,6 +951,7 @@ a {
           .blue {
             .lessRem(font-size, 18);
             color: #4ba3fb;
+            display: block;
           }
         }
 
@@ -921,39 +966,64 @@ a {
         }
         .detail {
           overflow: hidden;
-          .item {
-            display: block;
-            float: left;
-            height: 30px;
-            .lessRem(font-size, 16);
-            color: #999;
-            .lessRem(padding-left, 50);
-            &:nth-child(1) {
-              .lessRem(width, 350);
-              content: "";
-              background: url("../img/five-contact01.png") no-repeat;
-            }
-            &:nth-child(2) {
-              .lessRem(width, 200);
-              content: "";
-              background: url("../img/five-contact02.png") no-repeat;
-            }
-            &:nth-child(3) {
-              .lessRem(width, 200);
-              content: "";
-              background: url("../img/five-contact03.png") no-repeat;
-            }
-            &:nth-child(4) {
-              .lessRem(width, 200);
-              content: "";
-              background: url("../img/five-contact04.png") no-repeat;
-            }
-            &:nth-child(6) {
-              content: "";
-              background: url("../img/five-contact05.png") no-repeat;
+          .left {
+            width: 49%;
+            overflow: hidden;
 
+            float: left;
+            .item {
+              display: block;
+              float: left;
+              height: 30px;
+              .lessRem(font-size, 16);
+              color: #999;
+              .lessRem(padding-left, 50);
+              &:nth-child(1) {
+                .lessRem(width, 250);
+                content: "";
+                background: url("../img/five-contact01.png") no-repeat;
+              }
+              &:nth-child(2) {
+                .lessRem(width, 200);
+                content: "";
+                background: url("../img/five-contact02.png") no-repeat;
+              }
+            }
+
+          }
+          .right {
+            width: 49%;
+            overflow: hidden;
+            float: right;
+            .item {
+              display: block;
+              float: left;
+              height: 30px;
+              .lessRem(font-size, 16);
+              color: #999;
+              .lessRem(padding-left, 50);
+              &:nth-child(1) {
+                .lessRem(width, 200);
+                content: "";
+                background: url("../img/five-contact03.png") no-repeat;
+              }
+              &:nth-child(2) {
+                .lessRem(width, 200);
+                content: "";
+                background: url("../img/five-contact04.png") no-repeat;
+              }
             }
           }
+        }
+        .item {
+          display: block;
+          float: left;
+          height: 30px;
+          .lessRem(font-size, 16);
+          color: #999;
+          .lessRem(padding-left, 50);
+
+          background: url("../img/five-contact05.png") no-repeat;
         }
       }
     }
@@ -970,7 +1040,7 @@ a {
         color: #fff;
       }
     }
-
   }
+
 }
 
