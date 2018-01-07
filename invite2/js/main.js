@@ -11,38 +11,7 @@ if(isAndroid){
 }else{
 	download_address = ios_address;
 }
-var fullpage;
-function setFullpage(paddingtop) {
-	  $('#fullpage').fullpage({
-		//设置背景颜色
-		// 	sectionsColor: ['#000', '#FFDA90', '#E75054','#954B68','#58C3A0'],
-		// slide 左右箭头
-		controlArrows     : true,
-		// 每一页的内容是否垂直居中
-		verticalCentered  : false,
-		//不要和id和name相同
-		// anchors           : ['home', 'product', 'plan', 'recruit', 'us'],
-//			menu              : '#myMenu',
-		// css3比jquery 要流畅性能好
-		css3              : true,
-		// navigation        : true,
-//			navigationColor:'#f00',
-// 		navigationTooltips: ['首页', '产品介绍', '合作共赢', '王者招募', '关于我们'],
-//			loopBottom: true,
-//			loopTop: true,
-// 		paddingTop:paddingtop,
-		// 平滑循环
-		// continuousVertical: true,
-		// navigationColor   : '#333',
-		// onLeave:function (anchorLink,index) {
-		//
-		// 	$("#myMenu li").eq(index-1).addClass("active").siblings().removeClass("active");
-		// }
-//			fixedElements     : "#myMenu",
-	});
-}
 $(function () {
-	setFullpage();
 	var $phonenum = $("#phonenum");
 	var $varifyCode = $("#varifyCode");
 	// 获取验证码
@@ -70,25 +39,19 @@ $(function () {
 			}
 		}
 	});
-	$(".arrow").click(function () {
-		$.fn.fullpage.moveSectionDown()
-	});
+	
 	
 
 	
-	$(".get-gift").click(function () {
+	$("#pickRightNow").click(function () {
 		if(checkInput()){
 			// 网络请求
-			
 			$(".layer").show();
 		}
 	});
 	
 	$(".dialog-download").click(function () {
 		$(".layer").hide();
-		window.open(download_address);
-	});
-	$(".download").click(function () {
 		window.open(download_address);
 	});
 	function checkMobile(phonenum){
@@ -103,12 +66,11 @@ $(function () {
 		if(!checkMobile($phonenum.val())){
 			return false;
 		}
-		// if(!(/^\d{4}$/.test($varifyCode.val()))){
-		// 	alert("请输入正确的验证码!");
-	     //    $("#varifyCode").focus();
-		// 	return false;
-		// }
+		if(!(/^\d{4}$/.test($varifyCode.val()))){
+			alert("请输入正确的验证码!");
+	        $("#varifyCode").focus();
+			return false;
+		}
 		return true;
 	}
 });
-
