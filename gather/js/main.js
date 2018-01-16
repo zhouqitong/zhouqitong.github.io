@@ -27,7 +27,7 @@ $(function () {
 		$(".yindao").show();
 		console.log(" 是来自微信内置浏览器")
 	}else{
-		// $(".yindao").hide();
+		$(".yindao").hide();
 		console.log("不是来自微信内置浏览器")
 	}
 	
