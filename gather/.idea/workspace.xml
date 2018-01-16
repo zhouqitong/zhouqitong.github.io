@@ -27,28 +27,12 @@
       <file leaf-file-name="main_mobile.less" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/main_mobile.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="557" column="26" lean-forward="true" selection-start-line="557" selection-start-column="26" selection-end-line="557" selection-end-column="26" />
+            <state relative-caret-position="180">
+              <caret line="582" column="9" lean-forward="true" selection-start-line="582" selection-start-column="9" selection-end-line="582" selection-end-column="9" />
               <folding>
-                <element signature="e#8167#8997#0" expanded="false" />
-                <element signature="e#9034#9870#0" expanded="false" />
-                <element signature="e#9907#10743#0" expanded="false" />
-                <element signature="e#12281#12471#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main_pc.less" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/main_pc.less">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="553" column="39" lean-forward="true" selection-start-line="553" selection-start-column="39" selection-end-line="553" selection-end-column="39" />
-              <folding>
-                <element signature="e#8167#8997#0" expanded="false" />
-                <element signature="e#9034#9870#0" expanded="false" />
-                <element signature="e#9907#10743#0" expanded="false" />
-                <element signature="e#12281#12471#0" expanded="false" />
+                <element signature="e#9912#10749#0" expanded="false" />
+                <element signature="e#10784#11615#0" expanded="false" />
+                <element signature="e#12287#12477#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -64,10 +48,24 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="main_pc.less" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/main_pc.less">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="260">
+              <caret line="473" column="37" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="606" selection-end-column="0" />
+              <folding>
+                <element signature="e#9912#10749#0" expanded="false" />
+                <element signature="e#10784#11615#0" expanded="false" />
+                <element signature="e#12287#12477#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
+            <state relative-caret-position="1377">
               <caret line="92" column="39" lean-forward="false" selection-start-line="92" selection-start-column="30" selection-end-line="92" selection-end-column="39" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -89,7 +87,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>.lessRem(font-size,30)</find>
       <find>get-gift</find>
       <find>dialog-download</find>
       <find>get-</find>
@@ -119,6 +116,7 @@
       <find>rank</find>
       <find>rank-name</find>
       <find>rank-item</find>
+      <find>0.16rem;</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -168,6 +166,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -181,9 +180,58 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gather" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gather" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gather" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gather" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main_pc.less" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NestingTreeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gather" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gather" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main_mobile.less" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NestingTreeNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -314,12 +362,13 @@
       <workItem from="1508121760442" duration="211000" />
       <workItem from="1515310147349" duration="24141000" />
       <workItem from="1516032905297" duration="9533000" />
-      <workItem from="1516071488147" duration="3627000" />
+      <workItem from="1516071488147" duration="5403000" />
+      <workItem from="1516106881753" duration="1069000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="112683000" />
+    <option name="totallyTimeSpent" value="115528000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -380,13 +429,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/jquery.easings.min.js" />
     <entry file="file://$PROJECT_DIR$/img/arrow.png" />
-    <entry file="file://$PROJECT_DIR$/css/main_mobile.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="7" column="2" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="281" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/jquery.fullPage.min.js" />
     <entry file="file://$PROJECT_DIR$/img/fuli_02.png" />
     <entry file="file://$PROJECT_DIR$/img/fuli_01.png" />
@@ -431,14 +473,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/main_pc.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="260" column="7" lean-forward="false" selection-start-line="260" selection-start-column="7" selection-end-line="260" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/swiper-4.1.0.min.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -461,17 +495,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="36" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/test.html" />
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
+        <state relative-caret-position="1377">
           <caret line="92" column="39" lean-forward="false" selection-start-line="92" selection-start-column="30" selection-end-line="92" selection-end-column="39" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -481,28 +508,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/css/main_pc.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="386" column="14" lean-forward="true" selection-start-line="386" selection-start-column="14" selection-end-line="386" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/main_mobile.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="385" column="21" lean-forward="true" selection-start-line="385" selection-start-column="21" selection-end-line="385" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/css/main_pc.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="553" column="39" lean-forward="true" selection-start-line="553" selection-start-column="39" selection-end-line="553" selection-end-column="39" />
+        <state relative-caret-position="260">
+          <caret line="473" column="37" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="606" selection-end-column="0" />
           <folding>
-            <element signature="e#8167#8997#0" expanded="false" />
-            <element signature="e#9034#9870#0" expanded="false" />
-            <element signature="e#9907#10743#0" expanded="false" />
-            <element signature="e#12281#12471#0" expanded="false" />
+            <element signature="e#9912#10749#0" expanded="false" />
+            <element signature="e#10784#11615#0" expanded="false" />
+            <element signature="e#12287#12477#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/main_mobile.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="557" column="26" lean-forward="true" selection-start-line="557" selection-start-column="26" selection-end-line="557" selection-end-column="26" />
+        <state relative-caret-position="180">
+          <caret line="582" column="9" lean-forward="true" selection-start-line="582" selection-start-column="9" selection-end-line="582" selection-end-column="9" />
           <folding>
-            <element signature="e#8167#8997#0" expanded="false" />
-            <element signature="e#9034#9870#0" expanded="false" />
-            <element signature="e#9907#10743#0" expanded="false" />
-            <element signature="e#12281#12471#0" expanded="false" />
+            <element signature="e#9912#10749#0" expanded="false" />
+            <element signature="e#10784#11615#0" expanded="false" />
+            <element signature="e#12287#12477#0" expanded="false" />
           </folding>
         </state>
       </provider>
