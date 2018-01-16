@@ -41,7 +41,8 @@ $(function () {
 		}
 		if (ua.match(/WeiBo/i) == "weibo") {
 			//在新浪微博客户端打开
-			$(".yindao").hide();
+			$(".yindao").show();
+			
 			
 		}
 		if (ua.match(/QQ/i) == "qq") {
@@ -51,12 +52,14 @@ $(function () {
 		}
 		if (browser.versions.ios) {
 			//是否在IOS浏览器打开
-			$(".yindao").hide();
+			$(".yindao").show();
+			
 			
 		}
 		if(browser.versions.android){
 			//是否在安卓浏览器打开
-			$(".yindao").hide();
+			$(".yindao").show();
+			
 			
 		}
 	} else {
