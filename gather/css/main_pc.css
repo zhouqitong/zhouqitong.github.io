@@ -512,7 +512,7 @@ textarea:-ms-input-placeholder {
   text-align: center;
 }
 .main .swiper-container .swiper-slide .rule p {
-  color: #666666;
+  color: #666666; 
   font-size: 0.34666667rem;
   padding-top: 0.32rem;
 }
