@@ -27,13 +27,13 @@
       <file leaf-file-name="main_mobile.less" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/main_mobile.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="146">
-              <caret line="580" column="37" lean-forward="true" selection-start-line="580" selection-start-column="37" selection-end-line="580" selection-end-column="37" />
+            <state relative-caret-position="227">
+              <caret line="583" column="22" lean-forward="true" selection-start-line="583" selection-start-column="22" selection-end-line="583" selection-end-column="22" />
               <folding>
                 <element signature="e#8167#8997#0" expanded="false" />
                 <element signature="e#9034#9870#0" expanded="false" />
                 <element signature="e#9907#10743#0" expanded="false" />
-                <element signature="e#12280#12470#0" expanded="false" />
+                <element signature="e#12281#12471#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -42,13 +42,13 @@
       <file leaf-file-name="main_pc.less" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/main_pc.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="453" column="17" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="606" selection-end-column="0" />
+            <state relative-caret-position="221">
+              <caret line="554" column="28" lean-forward="true" selection-start-line="554" selection-start-column="28" selection-end-line="554" selection-end-column="28" />
               <folding>
                 <element signature="e#8167#8997#0" expanded="false" />
                 <element signature="e#9034#9870#0" expanded="false" />
                 <element signature="e#9907#10743#0" expanded="false" />
-                <element signature="e#12280#12470#0" expanded="false" />
+                <element signature="e#12281#12471#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -314,12 +314,12 @@
       <workItem from="1508121760442" duration="211000" />
       <workItem from="1515310147349" duration="24141000" />
       <workItem from="1516032905297" duration="9533000" />
-      <workItem from="1516071488147" duration="2657000" />
+      <workItem from="1516071488147" duration="3402000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="111713000" />
+    <option name="totallyTimeSpent" value="112458000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -483,26 +483,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/main_pc.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="453" column="17" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="606" selection-end-column="0" />
+        <state relative-caret-position="221">
+          <caret line="554" column="28" lean-forward="true" selection-start-line="554" selection-start-column="28" selection-end-line="554" selection-end-column="28" />
           <folding>
             <element signature="e#8167#8997#0" expanded="false" />
             <element signature="e#9034#9870#0" expanded="false" />
             <element signature="e#9907#10743#0" expanded="false" />
-            <element signature="e#12280#12470#0" expanded="false" />
+            <element signature="e#12281#12471#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/main_mobile.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="580" column="37" lean-forward="true" selection-start-line="580" selection-start-column="37" selection-end-line="580" selection-end-column="37" />
+        <state relative-caret-position="227">
+          <caret line="583" column="22" lean-forward="true" selection-start-line="583" selection-start-column="22" selection-end-line="583" selection-end-column="22" />
           <folding>
             <element signature="e#8167#8997#0" expanded="false" />
             <element signature="e#9034#9870#0" expanded="false" />
             <element signature="e#9907#10743#0" expanded="false" />
-            <element signature="e#12280#12470#0" expanded="false" />
+            <element signature="e#12281#12471#0" expanded="false" />
           </folding>
         </state>
       </provider>
