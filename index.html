@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/tether.min.css">
+    <link rel="stylesheet" href="css/home_index.css">
+
+</head>
+<body>
+<div class="collapse bg-inverse" id="navbarHeader">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 py-4">
+                <h4 class="text-white">About</h4>
+                <p class="text-muted">非淡泊无以明志 非宁静无以致远</p>
+            </div>
+            <div class="col-sm-4 py-4">
+                <h4 class="text-white">联系我</h4>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-white">我的微博</a></li>
+                    <li><a href="#" class="text-white">我的QQ</a></li>
+                    <li><a href="#" class="text-white">我的邮箱</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="navbar navbar-inverse bg-inverse">
+    <div class="container d-flex justify-content-between">
+        <a href="#" class="navbar-brand">关于</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader"
+                aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+</div>
+
+<section class="jumbotron text-center">
+    <div class="container">
+        <h1 class="jumbotron-heading">前端攻城狮</h1>
+        <p class="lead text-muted">专注前端、移动端开发</p>
+
+        <!--<p>
+          <a  class="btn btn-primary">我的博客</a>
+          <a  class="btn btn-secondary">新闻网站</a>
+          <a href="weijinsuo/index.html" class="btn btn-info">企业官网</a>
+          <a href="home/index.html" class="btn btn-danger">小商城</a>
+          
+        </p>-->
+
+
+    </div>
+</section>
+<section>
+    <div class="project">
+        <a href="blog.html">
+            <div class="list">
+                <img src="images/home/blog.jpg" alt=""/>
+                <div>
+                    <h2>数据可视化平台</h2>
+                    <p>springmvc + highcharts</p>
+                </div>
+            </div>
+        </a>
+
+        <a href="news/index.html">
+
+            <div class="list">
+                <img src="images/home/news.jpg" alt=""/>
+                <div>
+                    <h2>新闻网站</h2>
+                    <p>react + redux</p>
+                </div>
+            </div>
+        </a>
+        <a href="weijinsuo/index.html">
+            <div class="list">
+                <img src="images/home/offcial.jpg" alt=""/>
+
+                <div>
+                    <h2>企业官网</h2>
+                    <p>bootstrap + jquery</p>
+                </div>
+            </div>
+        </a>
+        <a href="vuemall">
+            <div class="list">
+                <img src="images/home/mall.jpg" alt=""/>
+
+                <div>
+                    <h2>IT商城</h2>
+                    <p>vue2.0 + vuex</p>
+                </div>
+            </div>
+        </a>
+        <a href="lottery/index.html">
+            <div class="list">
+                <img src="images/home/lottery.jpg" alt=""/>
+
+                <div>
+                    <h2>彩票</h2>
+                    <p>es6+wabpack</p>
+                </div>
+            </div>
+        </a>
+		<a href="evaluate/index.html">
+            <div class="list">
+                <img src="images/home/evaluate.jpg" alt=""/>
+
+                <div>
+                    <h2>估价</h2>
+                    <p>项目价格估算</p>
+                </div>
+            </div>
+        </a>
+        <a href="rongyaolive">
+            <div class="list">
+                <img src="images/home/rongyaolive.jpg" alt=""/>
+
+                <div>
+                    <h2>电竞</h2>
+                    <p>教学</p>
+                </div>
+            </div>
+        </a>
+    </div>
+
+</section>
+<footer class="text-muted">
+    <div class="container">
+        <p class="float-right">
+            <a href="#">回到顶部</a>
+            <span id="direction"></span>
+        </p>
+    </div>
+</footer>
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+<script src="js/jquery.slim.min.js"></script>
+<script src="js/tether.min.js"></script>
+
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+
+<script type="text/javascript">
+    $(function () {
+        $("")
+        $(".list").on("mouseenter mouseleave", function (e) {
+
+            var that = $(this);  // 先把当前元素存起来
+
+            var w = $(this).width(); // 得到盒子宽度
+            var h = $(this).height();// 得到盒子高度
+            console.log(w, h);
+            var x = (e.pageX - this.offsetLeft - (w / 2)) * (w > h ? (h / w) : 1);
+            // 获取x值
+            var y = (e.pageY - this.offsetTop - (h / 2)) * (h > w ? (w / h) : 1);
+            // 获取y值
+            var direction = Math.round((((Math.atan2(y, x) * (180 / Math.PI)) + 180) / 90) + 3) % 4; //direction的值为“0,1,2,3”分别对应着“上，右，下，左”
+//                 var direction = 0;
+            // 将点的坐标对应的弧度值换算成角度度数值   0 1 2 3
+            if (e.type == 'mouseenter') {
+                switch (direction) {
+                    case 0:
+                        comeOn("top");
+                        break;
+                    case 1:
+                        comeOn("right");
+                        break;
+                    case 2:
+                        comeOn("bottom");
+                        break;
+                    case 3:
+                        comeOn("left");
+                        break;
+                }
+            } else {
+
+                switch (direction) {
+                    case 0:  // 鼠标从上面进来
+                        getOut("top");
+                        break;
+                    case 1:  // 鼠标从上面进来
+                        getOut("right");
+                        break;
+                    case 2:  // 鼠标从上面进来
+                        getOut("bottom");
+                        break;
+                    case 3:  // 鼠标从上面进来
+                        getOut("left");
+                        break;
+                }
+            }
+            function comeOn(str) {
+                that.addClass("current");
+                that.children("div").removeClass().addClass(str);
+                // 先清除前的类， 留下现在的
+            }
+
+            function getOut(str) {
+                that.removeClass("current");
+                that.children("div").removeClass().addClass(str);
+            }
+        });
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<style type="text/css">
+    div {
+        position: absolute;
+        right: 100px;
+        top: 300px;
+        padding: 10px;
+        border: 1px solid red;
+        background: pink;
+        font-size: 18px;
+        color: white;
+        font-weight: bold;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    body {
+        height: 6000px;
+    }
+</style>
+<body>
+<div id="back">返回<br>顶部</div>
+</body>
+<script src='mylib2.js'></script>
+<script src='jquery-1.11.2.min.js'></script>
+
+
+<script type="text/javascript">
+	<!--实际使用发现绝对定位顶部会发生抖动,改成fixed定位效果更好-->
+	$(window).on('scroll', function () {
+		var top = window.scrollY || document.documentElement.scrollTop;
+		$('#back').css('top', top + 600 + 'px')
+	});
+	$$.on('back', 'click', function () {
+		window.scrollTo(0, 0);
+	})
+</script>
+</html>

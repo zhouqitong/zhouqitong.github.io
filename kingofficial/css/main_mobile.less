@@ -1,0 +1,957 @@
+@font-size-base: 75;
+//处理屏幕基准值(iphone6 750px)
+.lessRem(@name,@px) {
+    @{name}: @px/@font-size-base*1rem;
+}
+
+// 边框
+.lessBorder(@px,@color) {
+  border: @px * 1px @color solid;
+}
+
+.lessBorderTop(@px,@color) {
+  border: @px * 1px @color solid;
+}
+
+.lessBorderLeft(@px,@color) {
+  border: @px * 1px @color solid;
+}
+
+.lessBorderRight(@px,@color) {
+  border: @px * 1px @color solid;
+}
+
+.lessBorderBottom(@px,@color) {
+  border: @px * 1px @color solid;
+}
+
+.lessBgSizeOrPos(@name,@param1,@param2) {
+    @{name}: @param1/@font-size-base*1rem  @param2/@font-size-base*1rem;
+}
+
+.lessBgSizeOrPos1Param(@name,@param1) {
+    @{name}: @param1/@font-size-base*1rem;
+}
+
+
+.lessBorderRed {
+  border: 1px red solid;
+}
+
+html {
+  color: #000;
+  background: #FFF;
+}
+/*
+	TODO remove settings on BODY since we can't namespace it.
+*/
+/*
+	TODO test putting a class on HEAD.
+		- Fails on FF.
+*/
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+fieldset,
+img {
+  border: 0;
+}
+
+/*
+	TODO think about hanlding inheritence differently, maybe letting IE6 fail a bit...
+*/
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+caption,
+th {
+  text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+q:before,
+q:after {
+  content: '';
+}
+
+abbr,
+acronym {
+  border: 0;
+  font-variant: normal;
+}
+
+/* to preserve line-height and selector appearance */
+sup {
+  vertical-align: text-top;
+}
+
+sub {
+  vertical-align: text-bottom;
+}
+
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*to enable resizing for IE*/
+input,
+textarea,
+select {
+  *font-size: 100%;
+}
+
+/*because legend doesn't inherit in IE */
+legend {
+  color: #000;
+}
+
+/* YUI CSS Detection Stamp */
+#yui3-css-stamp.cssreset {
+  display: none;
+}
+
+/*box center*/
+.lessTransformCenter() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: 50% 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -webkit-transform-origin: 50% 50%;
+}
+
+.lessTransformCenterHorizontal {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  transform-origin: 50% 0;
+  -webkit-transform: translate(-50%, 0);
+  -webkit-transform-origin: 50% 0;
+}
+
+.lessTransformCenterVertical {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  transform-origin: 0 50%;
+  -webkit-transform: translate(0, -50%);
+  -webkit-transform-origin: 0 50%;
+}
+
+body {
+  font-family: tahoma, arial, 'Hiragino Sans GB', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+.wrap {
+  .lessRem(min-width, 700);
+  .lessRem(font-size, 14);
+  font-family: '黑体', Helvetica, Arial, sans-serif;
+  a {
+    color: #000;
+    text-decoration: none;
+  }
+}
+.topMenu {
+  position: fixed;
+  top: 0;
+  .lessRem(height, 80);
+  width: 100%;
+  background-color: #fff;
+  z-index: 2;
+  border-bottom: 1px solid #ccc;
+  .content {
+    .lessRem(width, 750);
+    .lessRem(height, 80);
+
+    margin: 0 auto;
+    .logo {
+      .lessRem(margin-right, 70);
+      display: inline-block;
+      > img {
+        .lessTransformCenterVertical;
+        .lessRem(width,132);
+        .lessRem(height,39);
+      }
+    }
+    ul {
+      display:none;
+    }
+    .login {
+      /*原来320*/
+      .lessRem(width, 350);
+      .lessRem(height, 80);
+      .lessRem(margin-left, 20);
+      .lessRem(margin-left, 20);
+      float: right;
+      display: block;
+      background: #332f47;
+      position: relative;
+      p {
+        color: #fff;
+        display: inline-block;
+        .lessTransformCenterVertical;
+        .lessRem(left,150);
+        .title {
+          .lessRem(font-size, 24);
+        }
+        .subtitle {
+          display: none;
+          .lessRem(font-size, 14);
+          color: #a9b0b8;
+        }
+
+      }
+      > img {
+        .lessTransformCenterVertical;
+        .lessRem(width, 54);
+        .lessRem(height, 54);
+        //float: left;
+        display: inline-block;
+        .lessRem(margin-left, 15);
+      }
+    }
+  }
+}
+
+#fp-nav ul li a.active span, .fp-slidesNav ul li a.active span {
+  background: #333; /*活动导航的颜色*/
+  border-color: #333;
+}
+
+#fp-nav ul li a span, .fp-slidesNav ul li a span {
+  background: transparent; /*非活动导航的颜色*/
+  height: 8px;
+  width: 8px;
+  margin: -4px 0 0 -4px;
+  border: 1px solid #333; /*这里设置的是非活动导航的颜色*/
+
+}
+
+#fp-nav ul li .fp-tooltip {
+  color: #333;
+
+}
+
+#fullpage {
+  position: relative;
+  #section1 {
+    background: url("../img/one-bg-moble.jpg") no-repeat;
+    width: 100%;
+    height: 100%;
+    .content {
+      .lessRem(width, 700);
+      margin: 0 auto;
+      overflow: hidden;
+      .left {
+        background: url("../img/one-left-bg.png") no-repeat;
+        .lessRem(width, 577);
+        .lessRem(height, 604);
+        background-size: 100% 100%;
+        margin: 0 auto;
+        .lessRem(margin-top,50);
+      }
+      .right {
+        .lessRem(width, 577);
+        .lessRem(height, 604);
+        overflow: hidden;
+        position: relative;
+        .lessRem(margin-left,60);
+        .top {
+          .lessRem(width, 380);
+          .lessRem(height, 200);
+          background: url("../img/one-right-bg.png") no-repeat;
+          .lessTransformCenterHorizontal;
+          background-size: 100% 100%;
+        }
+        .download {
+          .lessRem(font-size, 24);
+          position: absolute;
+          .lessRem(top,250);
+          text-align: center;
+          width:100%;
+          .lessTransformCenterHorizontal;
+          a {
+            display: inline-block;
+            .lessRem(width, 230);
+            .lessRem(height, 70);
+            .lessRem(line-height, 70);
+            .lessRem(border-radius, 30);
+            color: #ffffff;
+            cursor: pointer;
+            text-align: center;
+            > span {
+              .lessRem(margin-left, 30);
+            }
+          }
+          .ios {
+            background: #3e81e4 url("../img/ios.png") no-repeat;
+            .lessBgSizeOrPos(background-size, 39, 47);
+            .lessRem(background-position, 30);
+            .lessRem(margin-right, 20);
+          }
+          .android {
+            background: #3e81e4 url("../img/android.png") no-repeat;
+            //background-size: 41px 50px;
+            .lessBgSizeOrPos(background-size, 41, 50);
+            .lessRem(background-position, 30);
+          }
+        }
+      }
+
+      #meteor0 {
+        //
+        position: absolute;
+        top: -100px;
+        right: 200px;
+      }
+      #meteor1 {
+        //
+        position: absolute;
+        top: -100px;
+        right: 100px;
+      }
+      #meteor2 {
+        //
+        position: absolute;
+        top: -100px;
+        right: -110px;
+      }
+      #meteor3 {
+        //
+        position: absolute;
+        top: -100px;
+        left: 100px;
+      }
+      #meteor4 {
+        //
+        position: absolute;
+        top: -100px;
+        left: 400px;
+      }
+      #meteor5 {
+        //
+        position: absolute;
+        top: -100px;
+        right: 50px;
+      }
+    }
+
+  }
+  #section2 {
+    .lessRem(width, 700);
+    margin: 0 auto;
+    overflow: hidden;
+    .title {
+      margin: 0 auto;
+      .lessRem(width, 250);
+      .lessRem(margin-top,10);
+      text-align: center;
+      .title1 {
+        .lessRem(font-size, 30);
+        color: #000;
+        .lessRem(padding-left, 25);
+        position: relative;
+        &:before {
+          position: absolute;
+          content: " ";
+          .lessTransformCenterVertical;
+          left: 2%;
+          .lessRem(width, 38);
+          .lessRem(height, 38);
+          display: inline-block;
+          background: url("../img/one-title.png") no-repeat;
+          background-size: cover;
+        }
+      }
+      .title2 {
+        display:none;
+        .lessRem(font-size, 18);
+        color: #999;
+        .lessRem(margin-top, 20);
+
+      }
+    }
+    .product {
+      overflow: hidden;
+      display:flex;
+      justify-content: space-between;
+      .lessRem(margin-top,10);
+      .left {
+        overflow: hidden;
+      }
+      .right {
+        overflow: hidden;
+      }
+      .item {
+        .lessRem(width, 337);
+        .lessRem(height, 220);
+        background-color: #fafafa;
+        text-align: center;
+        position: relative;
+        .lessRem(margin-bottom,20);
+        border: 1px solid #fafafa;
+
+        &:hover {
+          box-shadow: 0 0 10px #ccc;
+        }
+        .title1 {
+          .lessRem(font-size, 24);
+          color: #000;
+        }
+        .title2 {
+          .lessRem(margin-top, 15);
+          color: #999;
+          .lessRem(font-size, 18);
+        }
+        .imgcontainer {
+          .lessRem(height, 69);
+          .lessRem(line-height, 69);
+          .lessRem(margin-top, 5);
+          .lessRem(margin-bottom, 22);
+          > img {
+            vertical-align: middle;
+            .lessRem(max-height, 69);
+          }
+        }
+
+      }
+      .item:nth-child(1), .item:nth-child(2) {
+        margin-top: 0;
+      }
+
+    }
+  }
+  #section3 {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    .top {
+      width: 100%;
+      .lessRem(height, 260);
+      position: relative;
+      background: url("../img/three-bg-mobile.jpg") no-repeat;
+      background-size: 100% 100%;
+      > p {
+        .lessRem(font-size, 30);
+        color: #fff;
+        .lessTransformCenterHorizontal;
+        .lessRem(margin-top, 80);
+        .lessRem(height, 43);
+        .lessRem(line-height, 43);
+        &:before {
+          content: "";
+          background: url(../img/three-title.png) no-repeat;
+          .lessRem(width, 44);
+          .lessRem(height, 41);
+          background-size: 100% 100%;
+          .lessRem(margin-right, 10);
+          .lessRem(padding-bottom, 10);
+          vertical-align: middle;
+          display: inline-block;
+        }
+      }
+      > img {
+        width: 100%;
+        .lessRem(height, 260);
+      }
+      > .title {
+        .lessRem(width, 700);
+        bottom: 0;
+        .lessRem(height, 100);
+        .lessTransformCenterHorizontal;
+        background-color: rgba(0, 0, 0, 0.5);
+        text-align: center;
+        color: #fff;
+        .title1 {
+          .lessRem(font-size, 24);
+          .lessRem(padding-top, 10);
+        }
+        .title2 {
+          .lessRem(font-size, 18);
+          .lessRem(padding-top, 10);
+        }
+      }
+    }
+    .plan {
+      .lessRem(width, 700);
+      margin: 0 auto;
+      background-color: #fff;
+      overflow: hidden;
+      text-align: center;
+      .lessRem(margin-top,10);
+      .left{
+        float: left;
+        overflow: hidden;
+        .lessRem(width,130);
+        .lessRem(height,130);
+      }
+      .right{
+        overflow: hidden;
+        float: left;
+        .lessRem(height,130);
+        .lessRem(line-height,130);
+
+      }
+      .item {
+        text-align: center;
+        overflow: hidden;
+         img {
+          .lessRem(margin-top, 25);
+          .lessRem(width, 62);
+          .lessRem(height, 62);
+        }
+        .title {
+          .lessRem(margin-top, 10);
+          .lessRem(margin-bottom, 10);
+          .lessRem(font-size, 18);
+          text-align: center;
+        }
+        .list {
+          .lessRem(padding-left, 30);
+          overflow: hidden;
+          color: #666;
+          .left {
+            .lessRem(font-size, 16);
+            display: block;
+            float: left;
+          }
+          .right {
+            .lessRem(font-size, 18);
+
+
+            text-align: left;
+            display: block;
+            float: left;
+          }
+        }
+        .title1 {
+          .lessRem(font-size, 18);
+
+
+          color: #666;
+        }
+      }
+    }
+    .cooper {
+      .lessRem(width, 700);
+      margin: 0 auto;
+      > p {
+        .lessRem(margin-top, 20);
+        .lessRem(font-size, 24);
+        color: #010101;
+        text-align: center;
+      }
+      .list {
+        .lessRem(margin-top, 10);
+        overflow: hidden;
+        .left {
+          display: flex;
+          justify-content: space-between;
+        }
+        .right {
+          display: flex;
+          justify-content: space-between;
+        }
+        .item {
+          .lessRem(width,140);
+          .lessRem(height,130);
+          text-align: center;
+          img {
+            .lessRem(width, 80);
+            .lessRem(height, 80);
+          }
+          p {
+            .lessRem(margin-top, 10);
+            .lessRem(font-size, 18);
+
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+  #section4 {
+    .top {
+      width: 100%;
+      .lessRem(height, 200);
+      position: relative;
+      background: url("../img/four-bg-mobile.jpg") no-repeat;
+      background-size: 100% 100%;
+      .title {
+        .lessRem(font-size, 30);
+        color: #fff;
+        .lessTransformCenter;
+        //.lessRem(margin-top, 80);
+        .lessRem(height, 43);
+        .lessRem(line-height, 43);
+
+        &:before {
+          content: "";
+          background: url(../img/four-title.png) no-repeat;
+          background-size: 100% 100%;
+          .lessRem(width, 50);
+          .lessRem(height, 41);
+          .lessRem(margin-right, 10);
+          .lessRem(padding-bottom, 10);
+          vertical-align: middle;
+          display: inline-block;
+        }
+      }
+      > img {
+        width: 100%;
+        .lessRem(height, 200);
+        display: block;
+      }
+    }
+    .list {
+      overflow: hidden;
+      .lessRem(margin-top, 10);
+      .left {
+        display: flex;
+        justify-content: space-around;
+      }
+      .right {
+        display: flex;
+        justify-content: space-around;
+      }
+      .item {
+        .lessRem(width, 350);
+        .lessRem(height, 223);
+        position: relative;
+        .lessRem(margin-top,15);
+        .lessRem(margin-bottom,10);
+        > img {
+          width: 100%;
+          height: 100%;
+        }
+        .title1 {
+          position: absolute;
+          top: 20%;
+          left: 30%;
+          .lessRem(font-size, 30);
+          color: #fffefe;
+        }
+        .title2 {
+          position: absolute;
+          top: 40%;
+          left: 30%;
+          .lessRem(font-size, 18);
+
+          color: #fff;
+        }
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+
+      .title1 {
+        position: absolute;
+        top: 25%;
+        left: 49%;
+        font-size: 30px;
+        color: #fffefe;
+      }
+      .title2 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-size: 30px;
+        color: #fff;
+      }
+    }
+
+    .advantage {
+      .lessRem(width, 700);
+      margin: 0 auto;
+      .subtitle {
+        color: #000;
+        text-align: center;
+        .lessRem(font-size, 30);
+        .lessRem(margin-top, 5);
+        .lessRem(margin-bottom, 5);
+      }
+      .platform {
+        .item {
+          position: relative;
+
+
+          &:nth-child(1) {
+            background: url("../img/four-plateform01.png") left top no-repeat;
+            .lessBgSizeOrPos(background-size, 107, 75);
+          }
+          &:nth-child(2) {
+            background: url("../img/four-plateform02.png") no-repeat;
+            .lessBgSizeOrPos(background-size, 96, 95);
+            .lessRem(margin-top,10);
+          }
+
+          .desc {
+            .lessRem(padding-left, 150);
+
+            .title1 {
+              .lessRem(font-size, 24);
+
+            }
+            .title2 {
+              .lessRem(font-size, 18);
+
+              .lessRem(margin-top, 5);
+              color: #666;
+            }
+
+          }
+          .desc-padding {
+
+          }
+
+        }
+
+      }
+    }
+
+  }
+  #section5 {
+    .top {
+      width: 100%;
+      .lessRem(height, 100);
+      background: url("../img/five-bg-mobile.jpg") no-repeat;
+      background-size: 100% 100%;
+      position: relative;
+      .title {
+        .lessRem(font-size, 30);
+        color: #fff;
+        .lessTransformCenter;
+        //.lessRem(margin-top, 80);
+        .lessRem(height, 43);
+        .lessRem(line-height, 43);
+
+        &:before {
+          content: "";
+          background: url(../img/five-title.png) no-repeat;
+          background-size: 100% 100%;
+
+          .lessRem(width, 50);
+          .lessRem(height, 41);
+          .lessRem(margin-right, 10);
+          .lessRem(padding-bottom, 10);
+          vertical-align: middle;
+          display: inline-block;
+        }
+      }
+       img {
+        width: 100%;
+        display: block;
+      }
+
+    }
+    .content {
+      .lessRem(width, 700);
+      margin: 0 auto;
+      .title1 {
+        .lessRem(font-size, 30);
+        .lessRem(margin-top, 45);
+        .lessRem(margin-bottom, 15);
+        text-align: center;
+      }
+      .company-intro {
+        display:none;
+
+        .title2 {
+          .lessRem(font-size, 16);
+          color: #999;
+          .lessRem(text-indent,60);
+        }
+      }
+      .list {
+        overflow: hidden;
+        margin:0 auto;
+        text-align: center;
+        .item {
+          background: url("../img/five-item.png") no-repeat center left  ;
+          .lessBgSizeOrPos(background-size,62,62);
+          .lessBgSizeOrPos1Param(background-position,30);
+          .lessRem(width, 700);
+          .lessRem(padding-left,120);
+          background-color: #fafafa;
+          margin:0 auto;
+          .lessRem(margin-top,20);
+          .title {
+            .lessRem(font-size, 24);
+            .lessRem(width,550);
+            color: #999;
+            text-align:left;
+            .lessRem(margin-bottom, 10);
+          }
+          .blue {
+            .lessRem(font-size, 24);
+            color: #4ba3fb;
+            display: block;
+          }
+        }
+      }
+      .contact-us {
+        .lessRem(margin-top, 50);
+        .title1 {
+          .lessRem(font-size, 30);
+          .lessRem(margin-bottom, 10);
+          text-align: center;
+        }
+        .detail {
+          overflow: hidden;
+          .left {
+            width: 49%;
+            overflow: hidden;
+            float: left;
+            .item {
+              display: block;
+              float: left;
+              .lessRem(height,50);
+              .lessRem(line-height,50);
+
+              .lessRem(font-size, 24);
+              color: #999;
+              .lessRem(padding-left, 50);
+              &:nth-child(1) {
+                .lessRem(width, 350);
+                content: "";
+                background: url("../img/five-contact01.png") no-repeat;
+              }
+              &:nth-child(2) {
+                .lessRem(width, 300);
+
+                content: "";
+                background: url("../img/five-contact02.png") no-repeat;
+
+              }
+            }
+          }
+          .right {
+            width: 49%;
+            overflow: hidden;
+            float: right;
+            .item {
+              display: block;
+              float: left;
+              .lessRem(height,50);
+              .lessRem(line-height,50);
+
+              .lessRem(font-size, 24);
+              color: #999;
+              .lessRem(padding-left, 50);
+              &:nth-child(1) {
+                .lessRem(width, 350);
+
+                content: "";
+                background: url("../img/five-contact03.png") no-repeat;
+
+              }
+              &:nth-child(2) {
+                .lessRem(width, 300);
+
+                content: "";
+                background: url("../img/five-contact04.png") no-repeat;
+
+              }
+            }
+          }
+        }
+        .item {
+          display: block;
+          float: left;
+          .lessRem(width,600);
+          .lessRem(height,70);
+          .lessRem(line-height,70);
+          .lessRem(font-size, 24);
+          color: #999;
+          .lessRem(padding-left, 50);
+          .lessRem(margin-top,10);
+          background: url("../img/five-contact05.png") no-repeat;
+
+        }
+      }
+    }
+    .footer {
+      text-align: center;
+      color: #fff;
+      .lessRem(font-size, 24);
+      width: 100%;
+      .lessRem(height, 70);
+      background-color: #332f47;
+      position: absolute;
+      .lessRem(bottom,0);
+      a {
+        color: #fff;
+      }
+    }
+  }
+}

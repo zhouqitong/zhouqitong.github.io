@@ -1,0 +1,438 @@
+@font-size-base: 75;
+//处理屏幕基准值(iphone6 750px)
+.lessRem(@name,@px) {
+    @{name}: @px/@font-size-base*1rem;
+}
+
+// 边框
+.lessBorder(@px,@color) {
+  border: @px * 1px @color solid;
+}
+
+.lessBorderTop(@px,@color) {
+  border: @px * 1px @color solid;
+}
+
+.lessBorderLeft(@px,@color) {
+  border: @px * 1px @color solid;
+}
+
+.lessBorderRight(@px,@color) {
+  border: @px * 1px @color solid;
+}
+
+.lessBorderBottom(@px,@color) {
+  border: @px * 1px @color solid;
+}
+
+.lessBgSizeOrPos(@name,@param1,@param2) {
+    @{name}: @param1/@font-size-base*1rem  @param2/@font-size-base*1rem;
+}
+
+.lessBgSizeOrPos1Param(@name,@param1) {
+    @{name}: @param1/@font-size-base*1rem;
+}
+
+html {
+  color: #000;
+  background: #FFF;
+}
+
+/*
+	TODO remove settings on BODY since we can't namespace it.
+*/
+/*
+	TODO test putting a class on HEAD.
+		- Fails on FF.
+*/
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+fieldset,
+img {
+  border: 0;
+}
+
+/*
+	TODO think about hanlding inheritence differently, maybe letting IE6 fail a bit...
+*/
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+caption,
+th {
+  text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+q:before,
+q:after {
+  content: '';
+}
+
+abbr,
+acronym {
+  border: 0;
+  font-variant: normal;
+}
+
+/* to preserve line-height and selector appearance */
+sup {
+  vertical-align: text-top;
+}
+
+sub {
+  vertical-align: text-bottom;
+}
+
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*to enable resizing for IE*/
+input,
+textarea,
+select {
+  *font-size: 100%;
+}
+
+/*because legend doesn't inherit in IE */
+legend {
+  color: #000;
+}
+
+/* YUI CSS Detection Stamp */
+#yui3-css-stamp.cssreset {
+  display: none;
+}
+
+/*box center*/
+.lessTransformCenter() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: 50% 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -webkit-transform-origin: 50% 50%;
+}
+
+.lessTransformCenterHorizontal {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  transform-origin: 50% 0;
+  -webkit-transform: translate(-50%, 0);
+  -webkit-transform-origin: 50% 0;
+}
+
+.lessTransformCenterVertical {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  transform-origin: 0 50%;
+  -webkit-transform: translate(0, -50%);
+  -webkit-transform-origin: 0 50%;
+}
+
+body {
+  font-family: tahoma, arial, 'Hiragino Sans GB', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+@fontColorLightYellow: #ffc657;
+@fontColorYellow: #ca973f;
+@fontColorRed: #f93a3a;
+@fontColorGray: #949494;
+@fontColorDarkGray: #999;
+@fontColorDarkYellow: #cb7434;
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
+
+.height-auto {
+  height: auto;
+}
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #AEA5E8;
+  .lessRem(font-size, 40);
+
+}
+
+input:-moz-placeholder, textarea:-moz-placeholder {
+  color: #AEA5E8;
+  .lessRem(font-size, 40);
+
+}
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  color: #AEA5E8;
+  .lessRem(font-size, 40);
+
+}
+
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  color: #AEA5E8;
+  .lessRem(font-size, 40);
+}
+
+#fullpage {
+  .lessRem(width,750);
+  margin: 0 auto;
+  #section1 {
+    background: #6356E2;
+
+    width: 100%;
+    height: 100%;
+    .banner {
+      background: url("../img/banner.png") no-repeat;
+      background-size: 100% 100%;
+      width: 100%;
+      .lessRem(height, 380);
+    }
+    .fuli-one {
+      .lessRem(margin-top, 10);
+
+      .fuli-one-top {
+        background: url("../img/fuli_01.png") no-repeat;
+        background-size: 100% 100%;
+        .lessRem(width, 600);
+        .lessRem(height, 500);
+        margin: 0 auto;
+
+        position: relative;
+        .input-mobile-container {
+          background: url("../img/input_bg.png") no-repeat;
+          .lessRem(width, 450);
+          .lessRem(height, 80);
+          .lessRem(line-height, 80);
+          .lessRem(bottom, 80);
+
+          .lessRem(padding-left, 20);
+          .lessRem(font-size, 40);
+          .lessTransformCenterHorizontal;
+          input {
+            background: #DEDDFD;
+            border: none;
+            color: #AEA5E8;
+            .lessRem(width,250);
+            .lessRem(margin-left, 50);
+          }
+          img {
+            .lessTransformCenterVertical;
+            .lessRem(width, 46);
+            .lessRem(height, 46);
+          }
+
+        }
+      }
+      .get-gift {
+        background: url("../img/btn_01.png") no-repeat;
+        background-size: 100% 100%;
+        .lessRem(width, 550);
+        .lessRem(height, 100);
+        margin: 0 auto;
+        .lessRem(margin-top, 30);
+        cursor:pointer;
+      }
+      .arrow {
+        .lessRem(margin-top, 30);
+        text-align: center;
+
+        img {
+          .lessRem(width, 45);
+          .lessRem(height, 45);
+        }
+      }
+    }
+
+  }
+  #section2 {
+    background: #6356E2;
+    .lessRem(padding-top, 10);
+
+    width: 100%;
+    height: 100%;
+    .fuli-two {
+      background: url("../img/fuli_02.png") no-repeat;
+      background-size: 100% 100%;
+      width: 100%;
+      .lessRem(width, 600);
+      .lessRem(height, 500);
+      margin: 0 auto;
+
+      position: relative;
+      .download {
+        background: url("../img/btn_02.png") no-repeat;
+        background-size: 100% 100%;
+        .lessRem(width, 550);
+        .lessRem(height, 100);
+        margin: 0 auto;
+        .lessRem(margin-top, 50);
+        bottom:5%;
+        .lessTransformCenterHorizontal;
+        cursor:pointer;
+
+      }
+
+    }
+    .fuli-three {
+      background: url("../img/fuli_03.png") no-repeat;
+      background-size: 100% 100%;
+      //width:100%;
+      .lessRem(width, 600);
+      .lessRem(height, 500);
+
+      margin: 0 auto;
+      .lessRem(margin-top, 50);
+
+    }
+    .explain {
+      color: #fff;
+      .lessRem(font-size, 26);
+      .lessRem(margin-top, 10);
+      text-align: center;
+
+    }
+  }
+  .layer {
+    position: absolute;
+    transition: .5s;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .6);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 10;
+
+  }
+  .dialog {
+    .lessTransformCenter;
+    .lessRem(width, 365);
+    .lessRem(height, 321);
+    background: url("../img/dialog_mobile.png") no-repeat;
+    background-size: cover;
+    color: @fontColorLightYellow;
+    text-align: center;
+    .dialog-title {
+      .lessRem(font-size, 20);
+      .lessRem(margin-top, 63);
+      background: url("../img/dialog_title_bg.png") no-repeat;
+      background-size: 100% 100%;
+    }
+    .dialog-content {
+      .lessRem(font-size, 18);
+      .lessRem(margin-top, 70);
+    }
+    .dialog-download {
+      .lessRem(width, 89);
+      .lessRem(height, 37);
+      .lessRem(line-height, 37);
+      .lessTransformCenterHorizontal;
+      .lessRem(margin-top, 60);
+      display: block;
+      cursor: pointer;
+      color: @fontColorLightYellow;
+      background: url("../img/download_bg_mobile.jpg") no-repeat;
+      background-size: 100% 100%;
+      .lessRem(font-size, 18);
+      text-decoration: none;
+    }
+  }
+
+  .layer-white {
+    position: fixed;
+    transition: .5s;
+    width: 100%;
+    height: 100%;
+    background: rgba(238, 238, 238, .8);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99eeeeee, endColorstr=#99eeeeee);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 9;
+    display: none;
+
+  }
+  .hide {
+    display: none;
+  }
+}
+
