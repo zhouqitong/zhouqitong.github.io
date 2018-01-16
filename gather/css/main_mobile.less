@@ -449,17 +449,123 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
         .rank-item {
           .lessRem(height, 100);
           .lessRem(line-height, 100);
+          .lessRem(margin-top,20);
           //position: relative;
           .left {
             .lessRem(font-size, 30);
             color: #464646;
-
-            img {
-              .lessRem(width, 60);
-              .lessRem(height, 60);
-              //.lessTransformCenterVertical;
-              vertical-align: middle;
+            position: relative;
+            .avatar-container-red{
+              position: relative;
+              .lessRem(width, 80);
+              .lessRem(height, 80);
+              float: left;
+              .lessTransformCenterVertical;
+              img{
+                .lessRem(width, 80);
+                .lessRem(height, 80);
+                .lessRem(border-radius, 40);
+                border: 1px solid #f00;
+              }
+              .small-tag{
+                background: #f00;
+                .lessRem(border-radius, 15);
+                .lessRem(width, 30);
+                .lessRem(height, 30);
+                .lessRem(line-height, 30);
+                .lessRem(font-size,12);
+                color: #fff;
+                text-align: center;
+                position: absolute;
+                bottom: 0;
+                .lessRem(right, -5);
+              }
             }
+            .avatar-container-orange{
+              position: relative;
+              .lessRem(width, 80);
+              .lessRem(height, 80);
+              float: left;
+              .lessTransformCenterVertical;
+              img{
+                .lessRem(width, 80);
+                .lessRem(height, 80);
+                .lessRem(border-radius, 40);
+                border: 1px solid #FA7527;
+              }
+              .small-tag{
+                background: #FA7527;
+                .lessRem(border-radius, 15);
+                .lessRem(width, 30);
+                .lessRem(height, 30);
+                .lessRem(line-height, 30);
+                .lessRem(font-size,12);
+                color: #fff;
+                text-align: center;
+                position: absolute;
+                bottom: 0;
+                .lessRem(right, -5);
+              }
+            }
+            .avatar-container-yellow{
+              position: relative;
+              .lessRem(width, 80);
+              .lessRem(height, 80);
+              float: left;
+              .lessTransformCenterVertical;
+              img{
+                .lessRem(width, 80);
+                .lessRem(height, 80);
+                .lessRem(border-radius, 40);
+                border: 1px solid #FFC600;
+              }
+              .small-tag{
+                background: #FFC600;
+                .lessRem(border-radius, 15);
+                .lessRem(width, 30);
+                .lessRem(height, 30);
+                .lessRem(line-height, 30);
+                .lessRem(font-size,12);
+                color: #fff;
+                text-align: center;
+                position: absolute;
+                bottom: 0;
+                .lessRem(right, -5);
+              }
+            }
+            .avatar-container-gray{
+              position: relative;
+              .lessRem(width, 80);
+              .lessRem(height, 80);
+              float: left;
+              .lessTransformCenterVertical;
+              img{
+                .lessRem(width, 80);
+                .lessRem(height, 80);
+                .lessRem(border-radius, 40);
+                border: 1px solid #ccc;
+              }
+              .small-tag{
+                background: #ccc;
+                .lessRem(border-radius, 15);
+                .lessRem(width, 30);
+                .lessRem(height, 30);
+                .lessRem(line-height, 30);
+                .lessRem(font-size,12);
+                color: #fff;
+                text-align: center;
+                position: absolute;
+                bottom: 0;
+                .lessRem(right, -5);
+              }
+            }
+
+
+            .rank-name{
+              float: left;
+              .lessRem(margin-left,120);
+            }
+
           }
           .right {
             .lessRem(font-size, 26);
