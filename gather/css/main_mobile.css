@@ -378,7 +378,7 @@ textarea:-ms-input-placeholder {
   border: 1px solid #f00;
 }
 .main .swiper-container .swiper-slide .rank .rank-item .left .avatar-container-red .small-tag {
-  background: #FFC600;
+  background: #f00;
   border-radius: 0.2rem;
   width: 0.4rem;
   height: 0.4rem;
@@ -409,7 +409,7 @@ textarea:-ms-input-placeholder {
   border: 1px solid #FA7527;
 }
 .main .swiper-container .swiper-slide .rank .rank-item .left .avatar-container-orange .small-tag {
-  background: #FFC600;
+  background: #FA7527;
   border-radius: 0.2rem;
   width: 0.4rem;
   height: 0.4rem;
