@@ -11,7 +11,25 @@ if(isAndroid){
 }else{
 	download_address = ios_address;
 }
+//判断是否微信登陆
+function isWeiXin() {
+	var ua = window.navigator.userAgent.toLowerCase();
+	console.log(ua);//mozilla/5.0 (iphone; cpu iphone os 9_1 like mac os x) applewebkit/601.1.46 (khtml, like gecko)version/9.0 mobile/13b143 safari/601.1
+	if (ua.match(/MicroMessenger/i) == 'micromessenger') {
+		return true;
+	} else {
+		return false;
+	}
+}
+
 $(function () {
+	if(isWeiXin()){
+		$(".yindao").show();
+		console.log(" 是来自微信内置浏览器")
+	}else{
+		$(".yindao").hide();
+		console.log("不是来自微信内置浏览器")
+	}
 	
 	var mySwiper = new Swiper ('.swiper-container', {
 		direction: 'horizontal',
