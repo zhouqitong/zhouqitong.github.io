@@ -75,9 +75,9 @@ $(function () {
 	//
 	// }
 	if(is_weixn()){
-		alert("true");
+		$(".yindao").show();
 	}else{
-		alert("false");
+		$(".yindao").hide();
 	}
 	
 	
